@@ -1,0 +1,858 @@
+[
+  {
+    "qms_field": "IDENT_INSURER",
+    "label": "Insurer Name",
+    "status": "covered",
+    "limit_amount": null,
+    "limit_text": "Star Health and Allied Insurance Company Limited",
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "IDENT_TPA",
+    "label": "TPA Name",
+    "status": "covered",
+    "limit_amount": null,
+    "limit_text": "Medi Assist Insurance TPA Private Limited",
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "POL_NUMBER",
+    "label": "Policy Number",
+    "status": "covered",
+    "limit_amount": null,
+    "limit_text": "STAR/GMC/2024/09841",
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "POL_PREV_INCEPTION",
+    "label": "Previous Year Inception Date",
+    "status": "covered",
+    "limit_amount": null,
+    "limit_text": "2023-04-01",
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "POL_START_DATE",
+    "label": "Policy Start Date",
+    "status": "covered",
+    "limit_amount": null,
+    "limit_text": "2024-04-01",
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "POL_END_DATE",
+    "label": "Policy End Date",
+    "status": "covered",
+    "limit_amount": null,
+    "limit_text": "2025-03-31",
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "POL_TENURE_MONTHS",
+    "label": "Policy Tenure (months)",
+    "status": "covered",
+    "limit_amount": 12,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "POL_PREMIUM_EXCL_GST",
+    "label": "Premium (excluding GST)",
+    "status": "covered",
+    "limit_amount": 1250000,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "POL_PREMIUM_INCL_GST",
+    "label": "Premium (including GST)",
+    "status": "covered",
+    "limit_amount": 1475000,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "FAM_EMPLOYEE",
+    "label": "Family - Employee Covered",
+    "status": "covered",
+    "limit_amount": null,
+    "limit_text": "True",
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "FAM_SPOUSE",
+    "label": "Family - Spouse Covered",
+    "status": "covered",
+    "limit_amount": null,
+    "limit_text": "True",
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "FAM_CHILDREN",
+    "label": "Family - Children Covered",
+    "status": "covered",
+    "limit_amount": null,
+    "limit_text": "True",
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "FAM_PARENTS",
+    "label": "Family - Parents Covered",
+    "status": "covered",
+    "limit_amount": null,
+    "limit_text": "True",
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "FAM_PARENTS_IN_LAW",
+    "label": "Family - Parents-in-Law Covered",
+    "status": "covered",
+    "limit_amount": null,
+    "limit_text": "True",
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "DEM_EMPLOYEES",
+    "label": "Number of Employees",
+    "status": "covered",
+    "limit_amount": 150,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "DEM_SPOUSES",
+    "label": "Number of Spouses",
+    "status": "covered",
+    "limit_amount": 120,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "DEM_CHILDREN",
+    "label": "Number of Children",
+    "status": "covered",
+    "limit_amount": 180,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "DEM_PARENTS",
+    "label": "Number of Parents / Parents-in-Law",
+    "status": "covered",
+    "limit_amount": 50,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "DEM_TOTAL_STATED",
+    "label": "Total Lives (as stated in policy)",
+    "status": "covered",
+    "limit_amount": 500,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "DEM_TOTAL_COMPUTED",
+    "label": "Total Lives (computed)",
+    "status": "covered",
+    "limit_amount": 500,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "ROOM_RENT",
+    "label": "Room Rent Limit",
+    "status": "limited",
+    "limit_amount": 5000,
+    "limit_text": "1% of Sum Insured per day, subject to max Rs. 5,000",
+    "limit_percent_of_si": 1.0,
+    "limit_days": null,
+    "conditions": [
+      "Single Private AC Room",
+      "Proportionate deduction will apply"
+    ],
+    "source_pages": [
+      3
+    ],
+    "evidence": "Room Rent is covered up to 1% of Sum Insured per day, subject to a maximum of Rs. 5,000 per day",
+    "confidence": 0.95
+  },
+  {
+    "qms_field": "ROOM_RENT_PCT",
+    "label": "Room Rent (% of SI)",
+    "status": "not_mentioned",
+    "limit_amount": null,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": null
+  },
+  {
+    "qms_field": "ROOM_ICU",
+    "label": "ICU Charges Limit",
+    "status": "limited",
+    "limit_amount": 10000,
+    "limit_text": "2% of Sum Insured per day, subject to max Rs. 10,000",
+    "limit_percent_of_si": 2.0,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [
+      3
+    ],
+    "evidence": "ICU charges are covered up to 2% of Sum Insured per day, subject to maximum Rs. 10,000 per day.",
+    "confidence": 0.95
+  },
+  {
+    "qms_field": "ROOM_ICU_PCT",
+    "label": "ICU Charges (% of SI)",
+    "status": "not_mentioned",
+    "limit_amount": null,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": null
+  },
+  {
+    "qms_field": "ROOM_PRE_HOSP_DAYS",
+    "label": "Pre-Hospitalisation Days",
+    "status": "covered",
+    "limit_amount": null,
+    "limit_text": "30 days prior to admission",
+    "limit_percent_of_si": null,
+    "limit_days": 30,
+    "conditions": [],
+    "source_pages": [
+      3
+    ],
+    "evidence": "Pre-hospitalization medical expenses: Covered for 30 days prior to the date of admission.",
+    "confidence": 0.95
+  },
+  {
+    "qms_field": "ROOM_POST_HOSP_DAYS",
+    "label": "Post-Hospitalisation Days",
+    "status": "covered",
+    "limit_amount": null,
+    "limit_text": "60 days from discharge",
+    "limit_percent_of_si": null,
+    "limit_days": 60,
+    "conditions": [],
+    "source_pages": [
+      3
+    ],
+    "evidence": "Post-hospitalization medical expenses: Covered for 60 days from the date of discharge.",
+    "confidence": 0.95
+  },
+  {
+    "qms_field": "MAT_9M_WAIT",
+    "label": "Maternity 9-Month Waiting Period",
+    "status": "waived_off",
+    "limit_amount": null,
+    "limit_text": "Waived off from Day 1",
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [
+      "All employees and spouses"
+    ],
+    "source_pages": [
+      4
+    ],
+    "evidence": "Maternity waiting period of 9 months is waived off from Day 1",
+    "confidence": 0.95
+  },
+  {
+    "qms_field": "MAT_BABY_DAY1",
+    "label": "Baby Day One Cover",
+    "status": "covered",
+    "limit_amount": null,
+    "limit_text": "Covered from birth up to normal delivery limit",
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [
+      4
+    ],
+    "evidence": "Baby Day One cover is included from birth",
+    "confidence": 0.95
+  },
+  {
+    "qms_field": "MAT_VACCINATION",
+    "label": "Baby Vaccination Cover",
+    "status": "covered",
+    "limit_amount": 5000,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [
+      "Within the first year"
+    ],
+    "source_pages": [
+      4
+    ],
+    "evidence": "Newborn vaccination cover is covered up to Rs. 5,000",
+    "confidence": 0.95
+  },
+  {
+    "qms_field": "MAT_NORMAL_METRO",
+    "label": "Maternity - Normal Delivery (Metro)",
+    "status": "covered",
+    "limit_amount": 50000,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [
+      "Restricted to first 2 living children"
+    ],
+    "source_pages": [
+      4
+    ],
+    "evidence": "Normal Delivery limit: Rs. 50,000 in Metro cities",
+    "confidence": 0.95
+  },
+  {
+    "qms_field": "MAT_NORMAL_NON_METRO",
+    "label": "Maternity - Normal Delivery (Non-Metro)",
+    "status": "covered",
+    "limit_amount": 40000,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [
+      "Restricted to first 2 living children"
+    ],
+    "source_pages": [
+      4
+    ],
+    "evidence": "Rs. 40,000 in Non-Metro cities",
+    "confidence": 0.95
+  },
+  {
+    "qms_field": "MAT_CSEC_METRO",
+    "label": "Maternity - C-Section (Metro)",
+    "status": "covered",
+    "limit_amount": 75000,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [
+      "Restricted to first 2 living children"
+    ],
+    "source_pages": [
+      4
+    ],
+    "evidence": "Caesarean (C-Section) delivery limit: Rs. 75,000 in Metro cities",
+    "confidence": 0.95
+  },
+  {
+    "qms_field": "MAT_CSEC_NON_METRO",
+    "label": "Maternity - C-Section (Non-Metro)",
+    "status": "covered",
+    "limit_amount": 60000,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [
+      "Restricted to first 2 living children"
+    ],
+    "source_pages": [
+      4
+    ],
+    "evidence": "Rs. 60,000 in Non-Metro cities",
+    "confidence": 0.95
+  },
+  {
+    "qms_field": "WAIT_30DAY",
+    "label": "30-Day Initial Waiting Period",
+    "status": "waived_off",
+    "limit_amount": null,
+    "limit_text": "Waived off from Day 1",
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [
+      5
+    ],
+    "evidence": "The standard 30-day initial waiting period is waived off under this Group policy.",
+    "confidence": 0.95
+  },
+  {
+    "qms_field": "WAIT_1YEAR",
+    "label": "1st Year Specific Disease Waiting Period",
+    "status": "waived_off",
+    "limit_amount": null,
+    "limit_text": "Waived off from Day 1",
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [
+      5
+    ],
+    "evidence": "Waiting period of 1st and 2nd year for specified illnesses / treatments is waived off.",
+    "confidence": 0.95
+  },
+  {
+    "qms_field": "WAIT_2YEAR",
+    "label": "2nd Year Specific Disease Waiting Period",
+    "status": "waived_off",
+    "limit_amount": null,
+    "limit_text": "Waived off from Day 1",
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [
+      5
+    ],
+    "evidence": "Waiting period of 1st and 2nd year for specified illnesses / treatments is waived off.",
+    "confidence": 0.95
+  },
+  {
+    "qms_field": "WAIT_PED",
+    "label": "Pre-Existing Disease (PED) Waiting Period",
+    "status": "waived_off",
+    "limit_amount": null,
+    "limit_text": "Waived off from Day 1",
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [
+      5
+    ],
+    "evidence": "Pre-existing diseases waiting period is waived off from inception of cover.",
+    "confidence": 0.95
+  },
+  {
+    "qms_field": "BEN_DAYCARE",
+    "label": "Day Care Procedures",
+    "status": "covered",
+    "limit_amount": null,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [
+      6
+    ],
+    "evidence": "All day care procedures requiring less than 24 hours hospitalization due to advanced technology are covered.",
+    "confidence": 0.95
+  },
+  {
+    "qms_field": "BEN_OPD",
+    "label": "OPD Benefit",
+    "status": "covered",
+    "limit_amount": 10000,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [
+      6
+    ],
+    "evidence": "OPD consultations and diagnostics are covered up to Rs. 10,000 per family",
+    "confidence": 0.95
+  },
+  {
+    "qms_field": "BEN_TELECONSULT",
+    "label": "Teleconsultation",
+    "status": "covered",
+    "limit_amount": null,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [
+      6
+    ],
+    "evidence": "Unlimited free audio/video consultations available via dedicated insurer mobile application.",
+    "confidence": 0.95
+  },
+  {
+    "qms_field": "BEN_PHARMACY",
+    "label": "Pharmacy Discount",
+    "status": "covered",
+    "limit_amount": null,
+    "limit_text": null,
+    "limit_percent_of_si": 10.0,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [
+      6
+    ],
+    "evidence": "Up to 10% discount on prescribed medicines across network partner pharmacies.",
+    "confidence": 0.95
+  },
+  {
+    "qms_field": "BEN_DOMICILIARY",
+    "label": "Domiciliary Hospitalisation",
+    "status": "covered",
+    "limit_amount": null,
+    "limit_text": null,
+    "limit_percent_of_si": 20.0,
+    "limit_days": null,
+    "conditions": [
+      "When treatment exceeds 3 days"
+    ],
+    "source_pages": [
+      6
+    ],
+    "evidence": "DOMICILIARY HOSPITALIZATION: Covered up to 20% of Sum Insured",
+    "confidence": 0.95
+  },
+  {
+    "qms_field": "BEN_HEALTH_CHECK",
+    "label": "Annual Health Check-Up",
+    "status": "covered",
+    "limit_amount": null,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [
+      "Employee and spouse"
+    ],
+    "source_pages": [
+      6
+    ],
+    "evidence": "Free annual preventive health check-up package for employee and spouse.",
+    "confidence": 0.95
+  },
+  {
+    "qms_field": "BEN_MODERN_TREAT",
+    "label": "Modern / Advanced Treatment",
+    "status": "covered",
+    "limit_amount": null,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [
+      6
+    ],
+    "evidence": "robotic surgery, stem cell therapy covered up to Sum Insured.",
+    "confidence": 0.95
+  },
+  {
+    "qms_field": "BEN_BARIATRIC",
+    "label": "Bariatric Surgery",
+    "status": "covered",
+    "limit_amount": 150000,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [
+      "BMI is greater than 35"
+    ],
+    "source_pages": [
+      7
+    ],
+    "evidence": "Covered up to Rs. 1,50,000 for morbid obesity when BMI is greater than 35.",
+    "confidence": 0.95
+  },
+  {
+    "qms_field": "BEN_PSYCHIATRIC",
+    "label": "Psychiatric / Mental Health Treatment",
+    "status": "covered",
+    "limit_amount": null,
+    "limit_text": "Up to Sum Insured",
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [
+      7
+    ],
+    "evidence": "In-patient psychiatric treatment covered up to Sum Insured.",
+    "confidence": 0.95
+  },
+  {
+    "qms_field": "BEN_AYUSH",
+    "label": "AYUSH Treatment",
+    "status": "covered",
+    "limit_amount": null,
+    "limit_text": "100% of Sum Insured",
+    "limit_percent_of_si": 100.0,
+    "limit_days": null,
+    "conditions": [
+      "In registered hospitals"
+    ],
+    "source_pages": [
+      7
+    ],
+    "evidence": "treatments covered up to 100% of Sum Insured in registered hospitals.",
+    "confidence": 0.95
+  },
+  {
+    "qms_field": "BEN_LGBTQ",
+    "label": "LGBTQ+ Cover",
+    "status": "covered",
+    "limit_amount": null,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [
+      "Recognized under spouse definition"
+    ],
+    "source_pages": [
+      7
+    ],
+    "evidence": "Same-sex partners and live-in partners recognized as dependents under spouse definition.",
+    "confidence": 0.95
+  },
+  {
+    "qms_field": "BEN_LIVEIN",
+    "label": "Live-In Partner Cover",
+    "status": "covered",
+    "limit_amount": null,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [
+      "Recognized under spouse definition"
+    ],
+    "source_pages": [
+      7
+    ],
+    "evidence": "Same-sex partners and live-in partners recognized as dependents under spouse definition.",
+    "confidence": 0.95
+  },
+  {
+    "qms_field": "BEN_ORGAN_DONOR",
+    "label": "Organ Donor Expenses",
+    "status": "covered",
+    "limit_amount": 500000,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [
+      7
+    ],
+    "evidence": "In-patient hospitalization expenses of donor covered up to Rs. 5,00,000.",
+    "confidence": 0.95
+  },
+  {
+    "qms_field": "INF_TREATMENT",
+    "label": "Infertility Treatment",
+    "status": "limited",
+    "limit_amount": 100000,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [
+      "Per family"
+    ],
+    "source_pages": [
+      7
+    ],
+    "evidence": "Infertility investigation and procedures covered up to Rs. 1,00,000",
+    "confidence": 0.95
+  },
+  {
+    "qms_field": "INF_SURROGACY",
+    "label": "Surrogacy",
+    "status": "not_covered",
+    "limit_amount": null,
+    "limit_text": "Not covered",
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [
+      7
+    ],
+    "evidence": "Surrogacy expenses are not covered.",
+    "confidence": 0.95
+  },
+  {
+    "qms_field": "AMB_ROAD",
+    "label": "Ambulance Charges (Road)",
+    "status": "covered",
+    "limit_amount": 2500,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [
+      "Per hospitalization episode"
+    ],
+    "source_pages": [
+      7
+    ],
+    "evidence": "Road ambulance expenses covered up to Rs. 2,500",
+    "confidence": 0.95
+  },
+  {
+    "qms_field": "AMB_AIR",
+    "label": "Air Ambulance",
+    "status": "covered",
+    "limit_amount": 100000,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [
+      "Per policy year"
+    ],
+    "source_pages": [
+      7
+    ],
+    "evidence": "Emergency air ambulance covered up to Rs. 1,00,000",
+    "confidence": 0.95
+  },
+  {
+    "qms_field": "BUF_AMOUNT",
+    "label": "Corporate Buffer Limit",
+    "status": "covered",
+    "limit_amount": 2500000,
+    "limit_text": "Rs. 25,00,000",
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [
+      "Critical illness cases",
+      "HR approval required"
+    ],
+    "source_pages": [
+      8
+    ],
+    "evidence": "A Corporate Floater Buffer of Rs. 25,00,000 is available for critical illness cases.",
+    "confidence": 0.95
+  },
+  {
+    "qms_field": "BUF_ELIGIBILITY",
+    "label": "Corporate Buffer - Who Can Use",
+    "status": "covered",
+    "limit_amount": null,
+    "limit_text": "Employees and dependents after exhaustion of base sum insured, with approval of designated HR authority",
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "BUF_DISEASE_CAPPING",
+    "label": "Disease-Wise Capping",
+    "status": "covered",
+    "limit_amount": null,
+    "limit_text": "[{\"disease\": \"Cataract surgery\", \"limit_amount\": 40000, \"limit_text\": \"Rs. 40,000 per eye\"}, {\"disease\": \"Joint replacement surgery\", \"limit_amount\": 150000, \"limit_text\": \"Rs. 1,50,000 per joint\"}, {\"disease\": \"Hernia surgery\", \"limit_amount\": 50000, \"limit_text\": \"Rs. 50,000\"}]",
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "BUF_WAIVER_CONDITIONS",
+    "label": "Applicable Waiver Conditions",
+    "status": "covered",
+    "limit_amount": null,
+    "limit_text": "[\"Waiver of 30-day initial waiting period\", \"Waiver of first four years waiting period for pre-existing diseases\", \"Waiver of maternity waiting period\"]",
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": 1.0
+  }
+]

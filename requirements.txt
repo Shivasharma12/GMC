@@ -1,0 +1,36 @@
+# GMC Extractor - pinned dependencies
+# PDF parsing
+pymupdf==1.24.5
+pdfplumber==0.11.4
+
+# OCR (optional - requires Tesseract installed separately)
+pytesseract==0.3.13
+Pillow==10.4.0
+
+# Retrieval
+rank-bm25==0.2.2
+rapidfuzz==3.9.7
+PyYAML==6.0.2
+
+# Schema / validation
+pydantic==2.8.2
+
+# LLM providers
+google-genai==1.16.0
+requests==2.32.3
+
+# CLI / logging
+typer==0.12.5
+click==8.1.7
+rich==13.8.1
+
+# Config
+python-dotenv==1.0.1
+
+# Tests
+pytest==8.3.3
+pytest-mock==3.14.0
+
+# Utilities
+httpx==0.28.1
+tenacity==9.0.0

@@ -1,0 +1,577 @@
+{
+  "document_info": {
+    "file_name": "sample_gmc_policy.pdf",
+    "total_pages": 8,
+    "scanned_pages": 0,
+    "provider": "mock",
+    "model": "mock-model",
+    "run_timestamp": "2026-10-29T19:07:51"
+  },
+  "identity": {
+    "insurer_name": "Star Health and Allied Insurance Company Limited",
+    "tpa_name": "Medi Assist Insurance TPA Private Limited",
+    "source_pages": [
+      1
+    ],
+    "confidence": 0.95
+  },
+  "policy_details": {
+    "policy_number": "STAR/GMC/2024/09841",
+    "previous_inception_date": "2023-04-01",
+    "policy_start_date": "2024-04-01",
+    "policy_end_date": "2025-03-31",
+    "tenure_months": 12,
+    "premium_excluding_gst": 1250000,
+    "premium_including_gst": 1475000,
+    "family_structure": {
+      "employee": true,
+      "spouse": true,
+      "children": true,
+      "parents": true,
+      "parents_in_law": true,
+      "conditions": [
+        "1+5 Family Floater",
+        "up to 2 dependent Children"
+      ]
+    },
+    "sum_insured_tiers": [
+      {
+        "amount": 300000,
+        "grade_or_category": "Grade B (Management)"
+      },
+      {
+        "amount": 500000,
+        "grade_or_category": "Grade A (Executive)"
+      }
+    ],
+    "source_pages": [
+      1
+    ],
+    "confidence": 0.95,
+    "conditions": []
+  },
+  "demographics": {
+    "num_employees": 150,
+    "num_spouses": 120,
+    "num_children": 180,
+    "num_parents": 50,
+    "total_lives_stated": 500,
+    "total_lives_computed": 500,
+    "count_mismatch": false,
+    "source_pages": [
+      2
+    ],
+    "confidence": 0.98,
+    "conditions": []
+  },
+  "features": {
+    "room_hospitalization": {
+      "room_rent": {
+        "status": "limited",
+        "limit_amount": 5000,
+        "limit_percent_of_si": 1.0,
+        "limit_days": null,
+        "limit_text": "1% of Sum Insured per day, subject to max Rs. 5,000",
+        "conditions": [
+          "Single Private AC Room",
+          "Proportionate deduction will apply"
+        ],
+        "source_pages": [
+          3
+        ],
+        "evidence": "Room Rent is covered up to 1% of Sum Insured per day, subject to a maximum of Rs. 5,000 per day",
+        "confidence": 0.95
+      },
+      "icu_charges": {
+        "status": "limited",
+        "limit_amount": 10000,
+        "limit_percent_of_si": 2.0,
+        "limit_days": null,
+        "limit_text": "2% of Sum Insured per day, subject to max Rs. 10,000",
+        "conditions": [],
+        "source_pages": [
+          3
+        ],
+        "evidence": "ICU charges are covered up to 2% of Sum Insured per day, subject to maximum Rs. 10,000 per day.",
+        "confidence": 0.95
+      },
+      "pre_hospitalization_days": {
+        "status": "covered",
+        "limit_amount": null,
+        "limit_percent_of_si": null,
+        "limit_days": 30,
+        "limit_text": "30 days prior to admission",
+        "conditions": [],
+        "source_pages": [
+          3
+        ],
+        "evidence": "Pre-hospitalization medical expenses: Covered for 30 days prior to the date of admission.",
+        "confidence": 0.95
+      },
+      "post_hospitalization_days": {
+        "status": "covered",
+        "limit_amount": null,
+        "limit_percent_of_si": null,
+        "limit_days": 60,
+        "limit_text": "60 days from discharge",
+        "conditions": [],
+        "source_pages": [
+          3
+        ],
+        "evidence": "Post-hospitalization medical expenses: Covered for 60 days from the date of discharge.",
+        "confidence": 0.95
+      }
+    },
+    "maternity": {
+      "nine_month_waiting_period": {
+        "status": "waived_off",
+        "limit_amount": null,
+        "limit_percent_of_si": null,
+        "limit_days": null,
+        "limit_text": "Waived off from Day 1",
+        "conditions": [
+          "All employees and spouses"
+        ],
+        "source_pages": [
+          4
+        ],
+        "evidence": "Maternity waiting period of 9 months is waived off from Day 1",
+        "confidence": 0.95
+      },
+      "baby_day_one_cover": {
+        "status": "covered",
+        "limit_amount": null,
+        "limit_percent_of_si": null,
+        "limit_days": null,
+        "limit_text": "Covered from birth up to normal delivery limit",
+        "conditions": [],
+        "source_pages": [
+          4
+        ],
+        "evidence": "Baby Day One cover is included from birth",
+        "confidence": 0.95
+      },
+      "vaccination_cover": {
+        "status": "covered",
+        "limit_amount": 5000,
+        "limit_percent_of_si": null,
+        "limit_days": null,
+        "limit_text": null,
+        "conditions": [
+          "Within the first year"
+        ],
+        "source_pages": [
+          4
+        ],
+        "evidence": "Newborn vaccination cover is covered up to Rs. 5,000",
+        "confidence": 0.95
+      },
+      "normal_delivery_metro": {
+        "status": "covered",
+        "limit_amount": 50000,
+        "limit_percent_of_si": null,
+        "limit_days": null,
+        "limit_text": null,
+        "conditions": [
+          "Restricted to first 2 living children"
+        ],
+        "source_pages": [
+          4
+        ],
+        "evidence": "Normal Delivery limit: Rs. 50,000 in Metro cities",
+        "confidence": 0.95
+      },
+      "normal_delivery_non_metro": {
+        "status": "covered",
+        "limit_amount": 40000,
+        "limit_percent_of_si": null,
+        "limit_days": null,
+        "limit_text": null,
+        "conditions": [
+          "Restricted to first 2 living children"
+        ],
+        "source_pages": [
+          4
+        ],
+        "evidence": "Rs. 40,000 in Non-Metro cities",
+        "confidence": 0.95
+      },
+      "c_section_metro": {
+        "status": "covered",
+        "limit_amount": 75000,
+        "limit_percent_of_si": null,
+        "limit_days": null,
+        "limit_text": null,
+        "conditions": [
+          "Restricted to first 2 living children"
+        ],
+        "source_pages": [
+          4
+        ],
+        "evidence": "Caesarean (C-Section) delivery limit: Rs. 75,000 in Metro cities",
+        "confidence": 0.95
+      },
+      "c_section_non_metro": {
+        "status": "covered",
+        "limit_amount": 60000,
+        "limit_percent_of_si": null,
+        "limit_days": null,
+        "limit_text": null,
+        "conditions": [
+          "Restricted to first 2 living children"
+        ],
+        "source_pages": [
+          4
+        ],
+        "evidence": "Rs. 60,000 in Non-Metro cities",
+        "confidence": 0.95
+      }
+    },
+    "waiting_periods": {
+      "thirty_day_waiting": {
+        "status": "waived_off",
+        "limit_amount": null,
+        "limit_percent_of_si": null,
+        "limit_days": null,
+        "limit_text": "Waived off from Day 1",
+        "conditions": [],
+        "source_pages": [
+          5
+        ],
+        "evidence": "The standard 30-day initial waiting period is waived off under this Group policy.",
+        "confidence": 0.95
+      },
+      "first_year_waiting": {
+        "status": "waived_off",
+        "limit_amount": null,
+        "limit_percent_of_si": null,
+        "limit_days": null,
+        "limit_text": "Waived off from Day 1",
+        "conditions": [],
+        "source_pages": [
+          5
+        ],
+        "evidence": "Waiting period of 1st and 2nd year for specified illnesses / treatments is waived off.",
+        "confidence": 0.95
+      },
+      "second_year_waiting": {
+        "status": "waived_off",
+        "limit_amount": null,
+        "limit_percent_of_si": null,
+        "limit_days": null,
+        "limit_text": "Waived off from Day 1",
+        "conditions": [],
+        "source_pages": [
+          5
+        ],
+        "evidence": "Waiting period of 1st and 2nd year for specified illnesses / treatments is waived off.",
+        "confidence": 0.95
+      },
+      "ped_waiting": {
+        "status": "waived_off",
+        "limit_amount": null,
+        "limit_percent_of_si": null,
+        "limit_days": null,
+        "limit_text": "Waived off from Day 1",
+        "conditions": [],
+        "source_pages": [
+          5
+        ],
+        "evidence": "Pre-existing diseases waiting period is waived off from inception of cover.",
+        "confidence": 0.95
+      }
+    },
+    "other_benefits_a": {
+      "day_care": {
+        "status": "covered",
+        "limit_amount": null,
+        "limit_percent_of_si": null,
+        "limit_days": null,
+        "limit_text": null,
+        "conditions": [],
+        "source_pages": [
+          6
+        ],
+        "evidence": "All day care procedures requiring less than 24 hours hospitalization due to advanced technology are covered.",
+        "confidence": 0.95
+      },
+      "opd": {
+        "status": "covered",
+        "limit_amount": 10000,
+        "limit_percent_of_si": null,
+        "limit_days": null,
+        "limit_text": null,
+        "conditions": [],
+        "source_pages": [
+          6
+        ],
+        "evidence": "OPD consultations and diagnostics are covered up to Rs. 10,000 per family",
+        "confidence": 0.95
+      },
+      "teleconsultation": {
+        "status": "covered",
+        "limit_amount": null,
+        "limit_percent_of_si": null,
+        "limit_days": null,
+        "limit_text": null,
+        "conditions": [],
+        "source_pages": [
+          6
+        ],
+        "evidence": "Unlimited free audio/video consultations available via dedicated insurer mobile application.",
+        "confidence": 0.95
+      },
+      "pharmacy_discount": {
+        "status": "covered",
+        "limit_amount": null,
+        "limit_percent_of_si": 10.0,
+        "limit_days": null,
+        "limit_text": null,
+        "conditions": [],
+        "source_pages": [
+          6
+        ],
+        "evidence": "Up to 10% discount on prescribed medicines across network partner pharmacies.",
+        "confidence": 0.95
+      },
+      "domiciliary_hospitalization": {
+        "status": "covered",
+        "limit_amount": null,
+        "limit_percent_of_si": 20.0,
+        "limit_days": null,
+        "limit_text": null,
+        "conditions": [
+          "When treatment exceeds 3 days"
+        ],
+        "source_pages": [
+          6
+        ],
+        "evidence": "DOMICILIARY HOSPITALIZATION: Covered up to 20% of Sum Insured",
+        "confidence": 0.95
+      },
+      "annual_health_checkup": {
+        "status": "covered",
+        "limit_amount": null,
+        "limit_percent_of_si": null,
+        "limit_days": null,
+        "limit_text": null,
+        "conditions": [
+          "Employee and spouse"
+        ],
+        "source_pages": [
+          6
+        ],
+        "evidence": "Free annual preventive health check-up package for employee and spouse.",
+        "confidence": 0.95
+      },
+      "modern_treatment": {
+        "status": "covered",
+        "limit_amount": null,
+        "limit_percent_of_si": null,
+        "limit_days": null,
+        "limit_text": null,
+        "conditions": [],
+        "source_pages": [
+          6
+        ],
+        "evidence": "robotic surgery, stem cell therapy covered up to Sum Insured.",
+        "confidence": 0.95
+      }
+    },
+    "other_benefits_b": {
+      "bariatric": {
+        "status": "covered",
+        "limit_amount": 150000,
+        "limit_percent_of_si": null,
+        "limit_days": null,
+        "limit_text": null,
+        "conditions": [
+          "BMI is greater than 35"
+        ],
+        "source_pages": [
+          7
+        ],
+        "evidence": "Covered up to Rs. 1,50,000 for morbid obesity when BMI is greater than 35.",
+        "confidence": 0.95
+      },
+      "psychiatric": {
+        "status": "covered",
+        "limit_amount": null,
+        "limit_percent_of_si": null,
+        "limit_days": null,
+        "limit_text": "Up to Sum Insured",
+        "conditions": [],
+        "source_pages": [
+          7
+        ],
+        "evidence": "In-patient psychiatric treatment covered up to Sum Insured.",
+        "confidence": 0.95
+      },
+      "ayush": {
+        "status": "covered",
+        "limit_amount": null,
+        "limit_percent_of_si": 100.0,
+        "limit_days": null,
+        "limit_text": "100% of Sum Insured",
+        "conditions": [
+          "In registered hospitals"
+        ],
+        "source_pages": [
+          7
+        ],
+        "evidence": "treatments covered up to 100% of Sum Insured in registered hospitals.",
+        "confidence": 0.95
+      },
+      "lgbtq": {
+        "status": "covered",
+        "limit_amount": null,
+        "limit_percent_of_si": null,
+        "limit_days": null,
+        "limit_text": null,
+        "conditions": [
+          "Recognized under spouse definition"
+        ],
+        "source_pages": [
+          7
+        ],
+        "evidence": "Same-sex partners and live-in partners recognized as dependents under spouse definition.",
+        "confidence": 0.95
+      },
+      "live_in_partner": {
+        "status": "covered",
+        "limit_amount": null,
+        "limit_percent_of_si": null,
+        "limit_days": null,
+        "limit_text": null,
+        "conditions": [
+          "Recognized under spouse definition"
+        ],
+        "source_pages": [
+          7
+        ],
+        "evidence": "Same-sex partners and live-in partners recognized as dependents under spouse definition.",
+        "confidence": 0.95
+      },
+      "organ_donor_expenses": {
+        "status": "covered",
+        "limit_amount": 500000,
+        "limit_percent_of_si": null,
+        "limit_days": null,
+        "limit_text": null,
+        "conditions": [],
+        "source_pages": [
+          7
+        ],
+        "evidence": "In-patient hospitalization expenses of donor covered up to Rs. 5,00,000.",
+        "confidence": 0.95
+      }
+    },
+    "infertility_ambulance": {
+      "infertility_treatment": {
+        "status": "limited",
+        "limit_amount": 100000,
+        "limit_percent_of_si": null,
+        "limit_days": null,
+        "limit_text": null,
+        "conditions": [
+          "Per family"
+        ],
+        "source_pages": [
+          7
+        ],
+        "evidence": "Infertility investigation and procedures covered up to Rs. 1,00,000",
+        "confidence": 0.95
+      },
+      "surrogacy": {
+        "status": "not_covered",
+        "limit_amount": null,
+        "limit_percent_of_si": null,
+        "limit_days": null,
+        "limit_text": "Not covered",
+        "conditions": [],
+        "source_pages": [
+          7
+        ],
+        "evidence": "Surrogacy expenses are not covered.",
+        "confidence": 0.95
+      },
+      "ambulance_charges": {
+        "status": "covered",
+        "limit_amount": 2500,
+        "limit_percent_of_si": null,
+        "limit_days": null,
+        "limit_text": null,
+        "conditions": [
+          "Per hospitalization episode"
+        ],
+        "source_pages": [
+          7
+        ],
+        "evidence": "Road ambulance expenses covered up to Rs. 2,500",
+        "confidence": 0.95
+      },
+      "air_ambulance": {
+        "status": "covered",
+        "limit_amount": 100000,
+        "limit_percent_of_si": null,
+        "limit_days": null,
+        "limit_text": null,
+        "conditions": [
+          "Per policy year"
+        ],
+        "source_pages": [
+          7
+        ],
+        "evidence": "Emergency air ambulance covered up to Rs. 1,00,000",
+        "confidence": 0.95
+      }
+    },
+    "buffer_waiver": {
+      "corporate_buffer_amount": {
+        "status": "covered",
+        "limit_amount": 2500000,
+        "limit_percent_of_si": null,
+        "limit_days": null,
+        "limit_text": "Rs. 25,00,000",
+        "conditions": [
+          "Critical illness cases",
+          "HR approval required"
+        ],
+        "source_pages": [
+          8
+        ],
+        "evidence": "A Corporate Floater Buffer of Rs. 25,00,000 is available for critical illness cases.",
+        "confidence": 0.95
+      },
+      "corporate_buffer_eligibility": "Employees and dependents after exhaustion of base sum insured, with approval of designated HR authority",
+      "disease_wise_capping": [
+        {
+          "disease": "Cataract surgery",
+          "limit_amount": 40000,
+          "limit_text": "Rs. 40,000 per eye"
+        },
+        {
+          "disease": "Joint replacement surgery",
+          "limit_amount": 150000,
+          "limit_text": "Rs. 1,50,000 per joint"
+        },
+        {
+          "disease": "Hernia surgery",
+          "limit_amount": 50000,
+          "limit_text": "Rs. 50,000"
+        }
+      ],
+      "waiver_conditions": [
+        "Waiver of 30-day initial waiting period",
+        "Waiver of first four years waiting period for pre-existing diseases",
+        "Waiver of maternity waiting period"
+      ],
+      "source_pages": [
+        8
+      ],
+      "confidence": 0.95
+    }
+  },
+  "overall_confidence": 0.951,
+  "warnings": []
+}

@@ -1,0 +1,308 @@
+# GMC Extractor - QMS Field Mapping
+# Maps internal field paths (dot-notation) -> QMS field names and display labels.
+# Used by export/qms_mapper.py to generate flat QMS JSON + CSV.
+# Format:
+#   <internal_path>:
+#     qms_field: QMS_FIELD_CODE
+#     label: "Human-readable label"
+#     type: amount | percent | days | text | boolean | date | list
+
+# ── Identity ──────────────────────────────────────────────────────────────────
+identity.insurer_name:
+  qms_field: IDENT_INSURER
+  label: "Insurer Name"
+  type: text
+
+identity.tpa_name:
+  qms_field: IDENT_TPA
+  label: "TPA Name"
+  type: text
+
+# ── Policy Details ────────────────────────────────────────────────────────────
+policy_details.policy_number:
+  qms_field: POL_NUMBER
+  label: "Policy Number"
+  type: text
+
+policy_details.previous_inception_date:
+  qms_field: POL_PREV_INCEPTION
+  label: "Previous Year Inception Date"
+  type: date
+
+policy_details.policy_start_date:
+  qms_field: POL_START_DATE
+  label: "Policy Start Date"
+  type: date
+
+policy_details.policy_end_date:
+  qms_field: POL_END_DATE
+  label: "Policy End Date"
+  type: date
+
+policy_details.tenure_months:
+  qms_field: POL_TENURE_MONTHS
+  label: "Policy Tenure (months)"
+  type: days
+
+policy_details.premium_excluding_gst:
+  qms_field: POL_PREMIUM_EXCL_GST
+  label: "Premium (excluding GST)"
+  type: amount
+
+policy_details.premium_including_gst:
+  qms_field: POL_PREMIUM_INCL_GST
+  label: "Premium (including GST)"
+  type: amount
+
+policy_details.family_structure.employee:
+  qms_field: FAM_EMPLOYEE
+  label: "Family - Employee Covered"
+  type: boolean
+
+policy_details.family_structure.spouse:
+  qms_field: FAM_SPOUSE
+  label: "Family - Spouse Covered"
+  type: boolean
+
+policy_details.family_structure.children:
+  qms_field: FAM_CHILDREN
+  label: "Family - Children Covered"
+  type: boolean
+
+policy_details.family_structure.parents:
+  qms_field: FAM_PARENTS
+  label: "Family - Parents Covered"
+  type: boolean
+
+policy_details.family_structure.parents_in_law:
+  qms_field: FAM_PARENTS_IN_LAW
+  label: "Family - Parents-in-Law Covered"
+  type: boolean
+
+# ── Demographics ──────────────────────────────────────────────────────────────
+demographics.num_employees:
+  qms_field: DEM_EMPLOYEES
+  label: "Number of Employees"
+  type: amount
+
+demographics.num_spouses:
+  qms_field: DEM_SPOUSES
+  label: "Number of Spouses"
+  type: amount
+
+demographics.num_children:
+  qms_field: DEM_CHILDREN
+  label: "Number of Children"
+  type: amount
+
+demographics.num_parents:
+  qms_field: DEM_PARENTS
+  label: "Number of Parents / Parents-in-Law"
+  type: amount
+
+demographics.total_lives_stated:
+  qms_field: DEM_TOTAL_STATED
+  label: "Total Lives (as stated in policy)"
+  type: amount
+
+demographics.total_lives_computed:
+  qms_field: DEM_TOTAL_COMPUTED
+  label: "Total Lives (computed)"
+  type: amount
+
+# ── Room / Hospitalization ────────────────────────────────────────────────────
+features.room_hospitalization.room_rent:
+  qms_field: ROOM_RENT
+  label: "Room Rent Limit"
+  type: amount
+
+features.room_hospitalization.room_rent_percent:
+  qms_field: ROOM_RENT_PCT
+  label: "Room Rent (% of SI)"
+  type: percent
+
+features.room_hospitalization.icu_charges:
+  qms_field: ROOM_ICU
+  label: "ICU Charges Limit"
+  type: amount
+
+features.room_hospitalization.icu_charges_percent:
+  qms_field: ROOM_ICU_PCT
+  label: "ICU Charges (% of SI)"
+  type: percent
+
+features.room_hospitalization.pre_hospitalization_days:
+  qms_field: ROOM_PRE_HOSP_DAYS
+  label: "Pre-Hospitalisation Days"
+  type: days
+
+features.room_hospitalization.post_hospitalization_days:
+  qms_field: ROOM_POST_HOSP_DAYS
+  label: "Post-Hospitalisation Days"
+  type: days
+
+# ── Maternity ─────────────────────────────────────────────────────────────────
+features.maternity.nine_month_waiting_period:
+  qms_field: MAT_9M_WAIT
+  label: "Maternity 9-Month Waiting Period"
+  type: text
+
+features.maternity.baby_day_one_cover:
+  qms_field: MAT_BABY_DAY1
+  label: "Baby Day One Cover"
+  type: text
+
+features.maternity.vaccination_cover:
+  qms_field: MAT_VACCINATION
+  label: "Baby Vaccination Cover"
+  type: text
+
+features.maternity.normal_delivery_metro:
+  qms_field: MAT_NORMAL_METRO
+  label: "Maternity - Normal Delivery (Metro)"
+  type: amount
+
+features.maternity.normal_delivery_non_metro:
+  qms_field: MAT_NORMAL_NON_METRO
+  label: "Maternity - Normal Delivery (Non-Metro)"
+  type: amount
+
+features.maternity.c_section_metro:
+  qms_field: MAT_CSEC_METRO
+  label: "Maternity - C-Section (Metro)"
+  type: amount
+
+features.maternity.c_section_non_metro:
+  qms_field: MAT_CSEC_NON_METRO
+  label: "Maternity - C-Section (Non-Metro)"
+  type: amount
+
+# ── Waiting Periods ───────────────────────────────────────────────────────────
+features.waiting_periods.thirty_day_waiting:
+  qms_field: WAIT_30DAY
+  label: "30-Day Initial Waiting Period"
+  type: text
+
+features.waiting_periods.first_year_waiting:
+  qms_field: WAIT_1YEAR
+  label: "1st Year Specific Disease Waiting Period"
+  type: text
+
+features.waiting_periods.second_year_waiting:
+  qms_field: WAIT_2YEAR
+  label: "2nd Year Specific Disease Waiting Period"
+  type: text
+
+features.waiting_periods.ped_waiting:
+  qms_field: WAIT_PED
+  label: "Pre-Existing Disease (PED) Waiting Period"
+  type: text
+
+# ── Other Benefits A ─────────────────────────────────────────────────────────
+features.other_benefits_a.day_care:
+  qms_field: BEN_DAYCARE
+  label: "Day Care Procedures"
+  type: text
+
+features.other_benefits_a.opd:
+  qms_field: BEN_OPD
+  label: "OPD Benefit"
+  type: amount
+
+features.other_benefits_a.teleconsultation:
+  qms_field: BEN_TELECONSULT
+  label: "Teleconsultation"
+  type: text
+
+features.other_benefits_a.pharmacy_discount:
+  qms_field: BEN_PHARMACY
+  label: "Pharmacy Discount"
+  type: text
+
+features.other_benefits_a.domiciliary_hospitalization:
+  qms_field: BEN_DOMICILIARY
+  label: "Domiciliary Hospitalisation"
+  type: text
+
+features.other_benefits_a.annual_health_checkup:
+  qms_field: BEN_HEALTH_CHECK
+  label: "Annual Health Check-Up"
+  type: text
+
+features.other_benefits_a.modern_treatment:
+  qms_field: BEN_MODERN_TREAT
+  label: "Modern / Advanced Treatment"
+  type: text
+
+# ── Other Benefits B ─────────────────────────────────────────────────────────
+features.other_benefits_b.bariatric:
+  qms_field: BEN_BARIATRIC
+  label: "Bariatric Surgery"
+  type: text
+
+features.other_benefits_b.psychiatric:
+  qms_field: BEN_PSYCHIATRIC
+  label: "Psychiatric / Mental Health Treatment"
+  type: text
+
+features.other_benefits_b.ayush:
+  qms_field: BEN_AYUSH
+  label: "AYUSH Treatment"
+  type: text
+
+features.other_benefits_b.lgbtq:
+  qms_field: BEN_LGBTQ
+  label: "LGBTQ+ Cover"
+  type: text
+
+features.other_benefits_b.live_in_partner:
+  qms_field: BEN_LIVEIN
+  label: "Live-In Partner Cover"
+  type: text
+
+features.other_benefits_b.organ_donor_expenses:
+  qms_field: BEN_ORGAN_DONOR
+  label: "Organ Donor Expenses"
+  type: text
+
+# ── Infertility / Ambulance ───────────────────────────────────────────────────
+features.infertility_ambulance.infertility_treatment:
+  qms_field: INF_TREATMENT
+  label: "Infertility Treatment"
+  type: amount
+
+features.infertility_ambulance.surrogacy:
+  qms_field: INF_SURROGACY
+  label: "Surrogacy"
+  type: text
+
+features.infertility_ambulance.ambulance_charges:
+  qms_field: AMB_ROAD
+  label: "Ambulance Charges (Road)"
+  type: amount
+
+features.infertility_ambulance.air_ambulance:
+  qms_field: AMB_AIR
+  label: "Air Ambulance"
+  type: amount
+
+# ── Buffer / Waiver ───────────────────────────────────────────────────────────
+features.buffer_waiver.corporate_buffer_amount:
+  qms_field: BUF_AMOUNT
+  label: "Corporate Buffer Limit"
+  type: amount
+
+features.buffer_waiver.corporate_buffer_eligibility:
+  qms_field: BUF_ELIGIBILITY
+  label: "Corporate Buffer - Who Can Use"
+  type: text
+
+features.buffer_waiver.disease_wise_capping:
+  qms_field: BUF_DISEASE_CAPPING
+  label: "Disease-Wise Capping"
+  type: list
+
+features.buffer_waiver.waiver_conditions:
+  qms_field: BUF_WAIVER_CONDITIONS
+  label: "Applicable Waiver Conditions"
+  type: list

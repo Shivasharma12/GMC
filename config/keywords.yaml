@@ -1,0 +1,401 @@
+# GMC Extractor - Keyword / Synonym Configuration
+# Each top-level key maps to a field group.
+# primary: main search terms; synonyms: alternate spellings/terminology.
+# Indian insurance terms, UK/US variants, and common abbreviations are all included.
+# This file is the ONLY place where insurance terminology is defined.
+# The extraction logic NEVER references insurer names or page numbers.
+
+identity:
+  primary:
+    - insurer
+    - insurance company
+    - policy issuer
+    - underwriter
+  synonyms:
+    - general insurance
+    - health insurance
+    - insurer name
+    - TPA
+    - third party administrator
+    - claims administrator
+    - claims managed by
+    - claims administered by
+    - administered by
+    - serviced by
+    - health administrator
+    - policy number
+    - group policy
+    - master policy
+    - cover note
+    - policy schedule
+    - certificate of insurance
+
+policy_details:
+  primary:
+    - policy period
+    - policy term
+    - policy start date
+    - policy end date
+    - inception date
+    - renewal date
+    - premium
+  synonyms:
+    - policy commencement
+    - risk commencement
+    - period of insurance
+    - coverage period
+    - effective date
+    - expiry date
+    - date of inception
+    - previous year inception
+    - previous inception
+    - last renewal date
+    - premium amount
+    - total premium
+    - net premium
+    - gross premium
+    - premium excluding GST
+    - premium including GST
+    - GST
+    - service tax
+    - tenure
+    - duration
+    - term of policy
+    - family floater
+    - floater
+    - individual cover
+    - family structure
+    - employee
+    - spouse
+    - children
+    - parents
+    - parents-in-law
+    - in-laws
+    - dependent
+    - sum insured
+    - SI
+    - sum assured
+    - coverage amount
+    - grade
+    - category
+    - band
+    - employee grade
+    - salary band
+    - designation
+
+demographics:
+  primary:
+    - number of lives
+    - member count
+    - census
+    - employee count
+  synonyms:
+    - number of employees
+    - total employees
+    - number of members
+    - total members
+    - total lives
+    - total insured
+    - lives covered
+    - insured members
+    - dependent members
+    - number of spouses
+    - number of children
+    - number of parents
+    - parents-in-law count
+    - family members
+    - member list
+    - member data
+    - headcount
+    - staff count
+    - total covered lives
+    - insured persons
+
+room_hospitalization:
+  primary:
+    - room rent
+    - room charges
+    - room entitlement
+    - ICU
+    - hospitalization
+  synonyms:
+    - room category
+    - room type
+    - single room
+    - private room
+    - AC room
+    - single private AC room
+    - semi-private room
+    - general ward
+    - twin sharing
+    - room rent limit
+    - room rent capping
+    - room rent sub-limit
+    - room and nursing charges
+    - accommodation charges
+    - bed charges
+    - ICU charges
+    - intensive care unit
+    - critical care unit
+    - ICCU
+    - NICU
+    - HDU
+    - high dependency unit
+    - ICU rent
+    - proportionate deduction
+    - co-payment
+    - co-pay
+    - proportionate
+    - deduction
+    - pre-hospitalisation
+    - pre-hospitalization
+    - pre-hospital expenses
+    - pre admission
+    - post-hospitalisation
+    - post-hospitalization
+    - post discharge
+    - post hospital
+    - hospitalisation
+    - hospitalization
+    - indoor treatment
+    - inpatient
+    - inpatient treatment
+
+maternity:
+  primary:
+    - maternity
+    - delivery
+    - childbirth
+    - pregnancy
+  synonyms:
+    - maternity benefit
+    - maternity cover
+    - maternity expenses
+    - maternity limit
+    - normal delivery
+    - vaginal delivery
+    - caesarean
+    - c-section
+    - caesarean section
+    - surgical delivery
+    - lscs
+    - lower segment caesarean
+    - delivery charges
+    - antenatal
+    - postnatal
+    - ante natal
+    - post natal
+    - prenatal
+    - new born
+    - newborn
+    - baby cover
+    - baby day one
+    - day one cover for new born
+    - baby from day one
+    - infant
+    - neonatal
+    - vaccination
+    - immunisation
+    - immunization
+    - baby vaccination
+    - child vaccination
+    - maternity waiting period
+    - nine month waiting
+    - 9 month waiting
+    - metro
+    - non-metro
+    - non metro
+    - tier 1
+    - tier 2
+    - city category
+
+waiting_periods:
+  primary:
+    - waiting period
+    - waiting
+    - exclusion period
+  synonyms:
+    - initial waiting period
+    - 30 day waiting
+    - 30-day waiting
+    - thirty day waiting
+    - cooling period
+    - first year exclusion
+    - second year exclusion
+    - 1st year waiting
+    - 2nd year waiting
+    - first year waiting
+    - second year waiting
+    - specific disease waiting
+    - named disease waiting
+    - disease-wise waiting
+    - pre-existing disease
+    - pre-existing condition
+    - PED
+    - pre existing
+    - prior condition
+    - pre-existing ailment
+    - existing disease
+    - waived
+    - waived off
+    - waiver
+    - not applicable
+    - exempted
+    - day one cover
+
+other_benefits_a:
+  primary:
+    - day care
+    - OPD
+    - outpatient
+    - domiciliary
+    - health check
+  synonyms:
+    - day care treatment
+    - day care procedures
+    - day care surgery
+    - outpatient department
+    - outpatient benefit
+    - OPD consultations
+    - doctor consultation
+    - tele-consultation
+    - teleconsultation
+    - telemedicine
+    - e-consultation
+    - online consultation
+    - pharmacy benefit
+    - pharmacy discount
+    - medicine discount
+    - drug discount
+    - domiciliary treatment
+    - domiciliary hospitalisation
+    - domiciliary hospitalization
+    - home treatment
+    - home care
+    - treatment at home
+    - annual health check up
+    - health check up
+    - health checkup
+    - preventive health check
+    - medical examination
+    - annual check
+    - modern treatment
+    - advanced treatment
+    - robotic surgery
+    - laser treatment
+    - stem cell
+    - immunotherapy
+    - proton therapy
+    - gene therapy
+    - balloon sinuplasty
+    - deep brain stimulation
+
+other_benefits_b:
+  primary:
+    - bariatric
+    - psychiatric
+    - AYUSH
+    - organ donor
+  synonyms:
+    - bariatric surgery
+    - obesity surgery
+    - weight loss surgery
+    - morbid obesity
+    - mental illness
+    - mental health
+    - psychiatry
+    - neuropsychiatry
+    - psychological treatment
+    - depression
+    - anxiety
+    - AYUSH treatment
+    - ayurveda
+    - yoga
+    - unani
+    - siddha
+    - homeopathy
+    - naturopathy
+    - alternative medicine
+    - traditional medicine
+    - LGBT
+    - LGBTQ
+    - same sex
+    - same-sex partner
+    - live-in partner
+    - domestic partner
+    - cohabiting partner
+    - partner cover
+    - organ transplant
+    - organ donor
+    - donor expenses
+    - transplantation
+
+infertility_ambulance:
+  primary:
+    - infertility
+    - IVF
+    - ambulance
+    - surrogacy
+  synonyms:
+    - infertility treatment
+    - fertility treatment
+    - assisted reproduction
+    - IVF treatment
+    - in vitro fertilisation
+    - in vitro fertilization
+    - IUI
+    - ICSI
+    - ART
+    - assisted reproductive technology
+    - surrogacy benefit
+    - surrogacy cover
+    - surrogate
+    - gestational surrogacy
+    - ambulance charges
+    - ambulance cover
+    - ambulance benefit
+    - emergency ambulance
+    - road ambulance
+    - air ambulance
+    - aero ambulance
+    - helicopter ambulance
+    - air evacuation
+    - emergency evacuation
+    - ambulance per hospitalisation
+    - ambulance per claim
+
+buffer_waiver:
+  primary:
+    - corporate buffer
+    - buffer
+    - disease-wise capping
+    - waiver
+  synonyms:
+    - corporate buffer limit
+    - buffer fund
+    - buffer pool
+    - buffer amount
+    - corporate pool
+    - top-up buffer
+    - common pool
+    - buffer utilization
+    - disease capping
+    - disease limit
+    - disease sub-limit
+    - capping on disease
+    - ailment wise limit
+    - specific ailment limit
+    - waiver conditions
+    - waiver of co-pay
+    - waiver of deductible
+    - deductible waiver
+    - co-pay waiver
+    - applicable waiver
+    - waiting period waiver
+    - special conditions
+    - endorsement
+    - annexure
+    - schedule of benefits
+    - addendum
+    - amendment
+    - rider
