@@ -83,7 +83,7 @@ def read_pdf(
         text = fitz_page.get_text("text")  # type: ignore[attr-defined]
         is_scanned = len(text.strip()) < _MIN_TEXT_CHARS
 
-        tables_md = extract_tables_as_markdown(pdf_path, page_num)
+        tables_md = extract_tables_as_markdown(pdf_path, page_num, fitz_page=fitz_page)
 
         ocr_text: Optional[str] = None
         if is_scanned and ocr_available:

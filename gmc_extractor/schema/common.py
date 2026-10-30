@@ -18,6 +18,7 @@ class FeatureStatus(str, Enum):
     applied = "applied"
     limited = "limited"
     not_mentioned = "not_mentioned"
+    needs_review = "needs_review"
 
 
 class FeatureValue(BaseModel):
@@ -73,5 +74,9 @@ class FeatureValue(BaseModel):
         le=1.0,
         description="Extraction confidence score (0-1).",
     )
+    unverified_candidate: Optional[dict] = Field(
+        default=None,
+        description="Candidate value that failed strict grounding checks and was removed from main values.",
+    )
 
-    model_config = {"populate_by_name": True}
+    model_config = {"populate_by_name": True, "extra": "allow"}

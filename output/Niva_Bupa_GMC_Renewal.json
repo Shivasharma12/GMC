@@ -1,0 +1,858 @@
+{
+  "document_info": {
+    "file_name": "Niva_Bupa_GMC_Renewal.pdf",
+    "total_pages": 6,
+    "scanned_pages": 0,
+    "provider": "gemini",
+    "model": "gemini-3.5-flash-lite",
+    "run_timestamp": "2026-10-31T01:03:20",
+    "failed_groups": []
+  },
+  "identity": {
+    "insurer_name": "Niva Bupa Health Insurance Company Limited",
+    "tpa_name": null,
+    "source_pages": [
+      3
+    ],
+    "evidence": "Agent name Hii Insurance Broking Services Private Limited Agent code BR03300001 Agent contact number NA Claims Administrator Niva Bupa Health Insurance Company Limited (formerly known as Max Bupa Health Insurance Company Limited) | Agent name | Hii Insurance Broking Services Private Limited",
+    "confidence": 1.0
+  },
+  "policy_details": {
+    "policy_number": "00600900202301",
+    "previous_inception_date": "2023-08-01",
+    "policy_start_date": "2023-08-01",
+    "policy_end_date": "2024-07-31",
+    "tenure_months": 12,
+    "premium_excluding_gst": 83454,
+    "premium_including_gst": 98476,
+    "family_structure": {
+      "employee": true,
+      "spouse": true,
+      "children": true,
+      "parents": false,
+      "parents_in_law": false,
+      "conditions": [
+        "Family Structure: Employee, Spouse and Kids"
+      ]
+    },
+    "sum_insured_tiers": [
+      {
+        "amount": 500000,
+        "grade_or_category": null
+      }
+    ],
+    "total_sum_insured": null,
+    "source_pages": [
+      3,
+      4
+    ],
+    "evidence": null,
+    "confidence": 1.0,
+    "conditions": [
+      "Inpatient Care Sum Insured is INR 5 Lakhs",
+      "Treated uploaded document start date as previous inception date per expiring policy baseline rule",
+      "Conflict detected: Schedule (p. 4) states Gross Premium Rs. 98,476, while Receipt/Section (p. 6) states Rs. 104,635."
+    ]
+  },
+  "demographics": {
+    "num_employees": 9,
+    "num_dependents": 11,
+    "num_spouses": null,
+    "num_children": null,
+    "num_parents": null,
+    "total_lives_stated": 20,
+    "total_lives_computed": 20,
+    "count_mismatch": true,
+    "source_pages": [
+      3
+    ],
+    "evidence": null,
+    "confidence": 1.0,
+    "conditions": [
+      "Family Structure is specified as Employee, Spouse and Kids",
+      "Derived: dependents (11) computed from total lives (20) - employees (9)",
+      "member-wise annexure not present in document"
+    ]
+  },
+  "features": {
+    "room_hospitalization": {
+      "room_rent": {
+        "status": "limited",
+        "limit_amount": null,
+        "limit_percent_of_si": 1.0,
+        "limit_days": null,
+        "limit_text": "1%",
+        "conditions": [
+          "If the Insured Person is admitted in the Hospital in a room category or in a room where the Room Rent is higher than the eligibility as specified above, then Niva Bupa shall be liable to pay only a pro-rated proportion of the total Associated Medical Expenses (including surcharge or taxes thereon) in the proportion of the difference between the Room Rent actually incurred and the entitled room category/eligible Room Rent."
+        ],
+        "source_pages": [
+          3
+        ],
+        "evidence": "Hospital Accommodation – Room rent/day & ICU/day | Normal | 1%",
+        "confidence": 0.98,
+        "unverified_candidate": null
+      },
+      "icu_charges": {
+        "status": "needs_review",
+        "limit_amount": null,
+        "limit_percent_of_si": null,
+        "limit_days": null,
+        "limit_text": null,
+        "conditions": [
+          "GROUNDING_GATE_FAILED: Candidate value rejected — does not exist in source text"
+        ],
+        "source_pages": [],
+        "evidence": null,
+        "confidence": 0.2,
+        "unverified_candidate": {
+          "status": "limited",
+          "limit_amount": null,
+          "limit_text": "2%",
+          "limit_percent_of_si": 2.0,
+          "limit_days": null,
+          "evidence": "Hospital Accommodation – Room rent/day & ICU/day | ICU | 2%",
+          "reasons": [
+            "Evidence quote not found in document text with >= 90% match: 'Hospital Accommodation – Room rent/day & ICU/day | ICU | 2%...'"
+          ]
+        }
+      },
+      "pre_hospitalization_days": {
+        "status": "covered",
+        "limit_amount": null,
+        "limit_percent_of_si": null,
+        "limit_days": 30,
+        "limit_text": "Covered upto Sum Insured for 30 days",
+        "conditions": [],
+        "source_pages": [
+          3
+        ],
+        "evidence": "Pre Hospitalization Medical Expenses | Covered upto Sum Insured for 30 days",
+        "confidence": 0.98,
+        "unverified_candidate": null
+      },
+      "post_hospitalization_days": {
+        "status": "covered",
+        "limit_amount": null,
+        "limit_percent_of_si": null,
+        "limit_days": 60,
+        "limit_text": "Covered upto Sum Insured for 60 days",
+        "conditions": [],
+        "source_pages": [
+          3
+        ],
+        "evidence": "Post Hospitalization Medical Expenses | Covered upto Sum Insured for 60 days",
+        "confidence": 0.98,
+        "unverified_candidate": null
+      }
+    },
+    "maternity": {
+      "nine_month_waiting_period": {
+        "status": "waived_off",
+        "limit_amount": null,
+        "limit_percent_of_si": null,
+        "limit_days": null,
+        "limit_text": null,
+        "conditions": [
+          "Maternity Expenses Benefit is available for Employees or Spouse only if both are covered in Insured members data received from Policyholder.",
+          "The Maternity Benefit may be claimed under the Policy in respect of eligible Insured Person(s) only twice during the lifetime of the Policy including any Renewal thereafter for the delivery of a child or Medically Necessary Treatment and lawful termination of pregnancy up to maximum of 2 pregnancies or terminations."
+        ],
+        "source_pages": [
+          3
+        ],
+        "evidence": "Waived Off",
+        "confidence": 0.95,
+        "unverified_candidate": null
+      },
+      "baby_day_one_cover": {
+        "status": "covered",
+        "limit_amount": null,
+        "limit_percent_of_si": null,
+        "limit_days": null,
+        "limit_text": "New born baby would be covered from the date of delivery provided we receive the endorsement within 90 days of delivery",
+        "conditions": [
+          "New born baby would be covered from the date of delivery provided we receive the endorsement within 90 days of delivery."
+        ],
+        "source_pages": [
+          3
+        ],
+        "evidence": "1. New born baby would be covered from the date of delivery provided we receive the endorsement within 90 days of delivery.",
+        "confidence": 0.98,
+        "unverified_candidate": null
+      },
+      "vaccination_cover": {
+        "status": "not_covered",
+        "limit_amount": null,
+        "limit_percent_of_si": null,
+        "limit_days": null,
+        "limit_text": null,
+        "conditions": [],
+        "source_pages": [],
+        "evidence": null,
+        "confidence": 1.0,
+        "unverified_candidate": null
+      },
+      "normal_delivery_metro": {
+        "status": "needs_review",
+        "limit_amount": null,
+        "limit_percent_of_si": null,
+        "limit_days": null,
+        "limit_text": null,
+        "conditions": [
+          "Same limit for metro and non-metro",
+          "Maternity Expenses Benefit is available for Employees or Spouse only if both are covered in Insured members data received from Policyholder.",
+          "The Maternity Benefit may be claimed under the Policy in respect of eligible Insured Person(s) only twice during the lifetime of the Policy including any Renewal thereafter for the delivery of a child or Medically Necessary Treatment and lawful termination of pregnancy up to maximum of 2 pregnancies or terminations.",
+          "GROUNDING_GATE_FAILED: Candidate value rejected — does not exist in source text"
+        ],
+        "source_pages": [],
+        "evidence": null,
+        "confidence": 0.2,
+        "unverified_candidate": {
+          "status": "limited",
+          "limit_amount": 25000,
+          "limit_text": "Same limit for metro and non-metro",
+          "limit_percent_of_si": null,
+          "limit_days": null,
+          "evidence": "Normal: 25,000",
+          "reasons": [
+            "Evidence quote not found in document text with >= 90% match: 'Normal: 25,000...'"
+          ]
+        }
+      },
+      "normal_delivery_non_metro": {
+        "status": "needs_review",
+        "limit_amount": null,
+        "limit_percent_of_si": null,
+        "limit_days": null,
+        "limit_text": null,
+        "conditions": [
+          "Same limit for metro and non-metro",
+          "Maternity Expenses Benefit is available for Employees or Spouse only if both are covered in Insured members data received from Policyholder.",
+          "The Maternity Benefit may be claimed under the Policy in respect of eligible Insured Person(s) only twice during the lifetime of the Policy including any Renewal thereafter for the delivery of a child or Medically Necessary Treatment and lawful termination of pregnancy up to maximum of 2 pregnancies or terminations.",
+          "GROUNDING_GATE_FAILED: Candidate value rejected — does not exist in source text"
+        ],
+        "source_pages": [],
+        "evidence": null,
+        "confidence": 0.2,
+        "unverified_candidate": {
+          "status": "limited",
+          "limit_amount": 25000,
+          "limit_text": "Same limit for metro and non-metro",
+          "limit_percent_of_si": null,
+          "limit_days": null,
+          "evidence": "Normal: 25,000",
+          "reasons": [
+            "Evidence quote not found in document text with >= 90% match: 'Normal: 25,000...'"
+          ]
+        }
+      },
+      "c_section_metro": {
+        "status": "needs_review",
+        "limit_amount": null,
+        "limit_percent_of_si": null,
+        "limit_days": null,
+        "limit_text": null,
+        "conditions": [
+          "Same limit for metro and non-metro",
+          "Maternity Expenses Benefit is available for Employees or Spouse only if both are covered in Insured members data received from Policyholder.",
+          "The Maternity Benefit may be claimed under the Policy in respect of eligible Insured Person(s) only twice during the lifetime of the Policy including any Renewal thereafter for the delivery of a child or Medically Necessary Treatment and lawful termination of pregnancy up to maximum of 2 pregnancies or terminations.",
+          "GROUNDING_GATE_FAILED: Candidate value rejected — does not exist in source text"
+        ],
+        "source_pages": [],
+        "evidence": null,
+        "confidence": 0.2,
+        "unverified_candidate": {
+          "status": "limited",
+          "limit_amount": 35000,
+          "limit_text": "Same limit for metro and non-metro",
+          "limit_percent_of_si": null,
+          "limit_days": null,
+          "evidence": "C-Section: 35,000",
+          "reasons": [
+            "Evidence quote not found in document text with >= 90% match: 'C-Section: 35,000...'"
+          ]
+        }
+      },
+      "c_section_non_metro": {
+        "status": "needs_review",
+        "limit_amount": null,
+        "limit_percent_of_si": null,
+        "limit_days": null,
+        "limit_text": null,
+        "conditions": [
+          "Same limit for metro and non-metro",
+          "Maternity Expenses Benefit is available for Employees or Spouse only if both are covered in Insured members data received from Policyholder.",
+          "The Maternity Benefit may be claimed under the Policy in respect of eligible Insured Person(s) only twice during the lifetime of the Policy including any Renewal thereafter for the delivery of a child or Medically Necessary Treatment and lawful termination of pregnancy up to maximum of 2 pregnancies or terminations.",
+          "GROUNDING_GATE_FAILED: Candidate value rejected — does not exist in source text"
+        ],
+        "source_pages": [],
+        "evidence": null,
+        "confidence": 0.2,
+        "unverified_candidate": {
+          "status": "limited",
+          "limit_amount": 35000,
+          "limit_text": "Same limit for metro and non-metro",
+          "limit_percent_of_si": null,
+          "limit_days": null,
+          "evidence": "C-Section: 35,000",
+          "reasons": [
+            "Evidence quote not found in document text with >= 90% match: 'C-Section: 35,000...'"
+          ]
+        }
+      }
+    },
+    "waiting_periods": {
+      "thirty_day_waiting": {
+        "status": "needs_review",
+        "limit_amount": null,
+        "limit_percent_of_si": null,
+        "limit_days": null,
+        "limit_text": null,
+        "conditions": [
+          "GROUNDING_GATE_FAILED: Candidate value rejected — does not exist in source text"
+        ],
+        "source_pages": [],
+        "evidence": null,
+        "confidence": 0.2,
+        "unverified_candidate": {
+          "status": "waived_off",
+          "limit_amount": null,
+          "limit_text": null,
+          "limit_percent_of_si": null,
+          "limit_days": 30,
+          "evidence": "Initial Waiting Period | Waived Off",
+          "reasons": [
+            "limit_days=30 not found in evidence and cited page text"
+          ]
+        }
+      },
+      "first_year_waiting": {
+        "status": "needs_review",
+        "limit_amount": null,
+        "limit_percent_of_si": null,
+        "limit_days": null,
+        "limit_text": null,
+        "conditions": [
+          "GROUNDING_GATE_FAILED: Candidate value rejected — does not exist in source text"
+        ],
+        "source_pages": [],
+        "evidence": null,
+        "confidence": 0.2,
+        "unverified_candidate": {
+          "status": "waived_off",
+          "limit_amount": null,
+          "limit_text": null,
+          "limit_percent_of_si": null,
+          "limit_days": 365,
+          "evidence": "2 yr exclusions (Disease Specific Exclusions) | Waived Off",
+          "reasons": [
+            "limit_days=365 not found in evidence and cited page text"
+          ]
+        }
+      },
+      "second_year_waiting": {
+        "status": "needs_review",
+        "limit_amount": null,
+        "limit_percent_of_si": null,
+        "limit_days": null,
+        "limit_text": null,
+        "conditions": [
+          "GROUNDING_GATE_FAILED: Candidate value rejected — does not exist in source text"
+        ],
+        "source_pages": [],
+        "evidence": null,
+        "confidence": 0.2,
+        "unverified_candidate": {
+          "status": "waived_off",
+          "limit_amount": null,
+          "limit_text": null,
+          "limit_percent_of_si": null,
+          "limit_days": 730,
+          "evidence": "2 yr exclusions (Disease Specific Exclusions) | Waived Off",
+          "reasons": [
+            "limit_days=730 not found in evidence and cited page text"
+          ]
+        }
+      },
+      "ped_waiting": {
+        "status": "waived_off",
+        "limit_amount": null,
+        "limit_percent_of_si": null,
+        "limit_days": null,
+        "limit_text": null,
+        "conditions": [],
+        "source_pages": [
+          3
+        ],
+        "evidence": "Pre-Existing Disease (PED) | Waived Off",
+        "confidence": 1.0,
+        "unverified_candidate": null
+      }
+    },
+    "other_benefits_a": {
+      "day_care": {
+        "status": "covered",
+        "limit_amount": null,
+        "limit_percent_of_si": null,
+        "limit_days": null,
+        "limit_text": "Covered upto Sum Insured",
+        "conditions": [],
+        "source_pages": [
+          3
+        ],
+        "evidence": "Listed Day Care Treatment | Covered upto Sum Insured",
+        "confidence": 1.0,
+        "unverified_candidate": null
+      },
+      "opd": {
+        "status": "not_covered",
+        "limit_amount": null,
+        "limit_percent_of_si": null,
+        "limit_days": null,
+        "limit_text": "Not Covered",
+        "conditions": [
+          "OPD Coverage explicitly Not Covered in policy schedule"
+        ],
+        "source_pages": [
+          3
+        ],
+        "evidence": "OPD Coverage | Not Covered",
+        "confidence": 1.0,
+        "unverified_candidate": null
+      },
+      "teleconsultation": {
+        "status": "not_mentioned",
+        "limit_amount": null,
+        "limit_percent_of_si": null,
+        "limit_days": null,
+        "limit_text": null,
+        "conditions": [],
+        "source_pages": [],
+        "evidence": null,
+        "confidence": 1.0,
+        "unverified_candidate": null
+      },
+      "pharmacy_discount": {
+        "status": "not_mentioned",
+        "limit_amount": null,
+        "limit_percent_of_si": null,
+        "limit_days": null,
+        "limit_text": null,
+        "conditions": [],
+        "source_pages": [],
+        "evidence": null,
+        "confidence": 1.0,
+        "unverified_candidate": null
+      },
+      "domiciliary_hospitalization": {
+        "status": "not_mentioned",
+        "limit_amount": null,
+        "limit_percent_of_si": null,
+        "limit_days": null,
+        "limit_text": null,
+        "conditions": [],
+        "source_pages": [],
+        "evidence": null,
+        "confidence": 1.0,
+        "unverified_candidate": null
+      },
+      "annual_health_checkup": {
+        "status": "not_mentioned",
+        "limit_amount": null,
+        "limit_percent_of_si": null,
+        "limit_days": null,
+        "limit_text": null,
+        "conditions": [],
+        "source_pages": [],
+        "evidence": null,
+        "confidence": 1.0,
+        "unverified_candidate": null
+      },
+      "modern_treatment": {
+        "status": "limited",
+        "limit_amount": null,
+        "limit_percent_of_si": null,
+        "limit_days": null,
+        "limit_text": "50% co-pay for cyberknife treatment/Robotic Surgery/Bio-absorbable Stent/FAMETO Laser Surgery/Toric lens/KT Laser Prostate",
+        "conditions": [
+          "50% co-pay for cyberknife treatment/Robotic Surgery/Bio-absorbable Stent/FAMETO Laser Surgery/Toric lens/KT Laser Prostate"
+        ],
+        "source_pages": [
+          3
+        ],
+        "evidence": "3. 50% co-pay For cyberknife treatment/Robotic Surgery/Bio-absorbabLe Stent/FAMETO Laser Suregry/Toric lens/KT Laser Prostate.",
+        "confidence": 0.98,
+        "unverified_candidate": null
+      }
+    },
+    "other_benefits_b": {
+      "bariatric": {
+        "status": "not_mentioned",
+        "limit_amount": null,
+        "limit_percent_of_si": null,
+        "limit_days": null,
+        "limit_text": null,
+        "conditions": [],
+        "source_pages": [],
+        "evidence": null,
+        "confidence": 1.0,
+        "unverified_candidate": null
+      },
+      "psychiatric": {
+        "status": "covered",
+        "limit_amount": null,
+        "limit_percent_of_si": null,
+        "limit_days": null,
+        "limit_text": "Covered",
+        "conditions": [
+          "Psychiatric Ailments / Functional Endoscopic Sinus Surgery / Mental illness covered"
+        ],
+        "source_pages": [
+          3
+        ],
+        "evidence": "Psychiatric Ailments / Functional Endoscopic Sinus Surgery / Mental illness covered",
+        "confidence": 1.0,
+        "unverified_candidate": null
+      },
+      "ayush": {
+        "status": "not_mentioned",
+        "limit_amount": null,
+        "limit_percent_of_si": null,
+        "limit_days": null,
+        "limit_text": null,
+        "conditions": [],
+        "source_pages": [],
+        "evidence": null,
+        "confidence": 1.0,
+        "unverified_candidate": null
+      },
+      "lgbtq": {
+        "status": "not_mentioned",
+        "limit_amount": null,
+        "limit_percent_of_si": null,
+        "limit_days": null,
+        "limit_text": null,
+        "conditions": [],
+        "source_pages": [],
+        "evidence": null,
+        "confidence": 1.0,
+        "unverified_candidate": null
+      },
+      "live_in_partner": {
+        "status": "not_mentioned",
+        "limit_amount": null,
+        "limit_percent_of_si": null,
+        "limit_days": null,
+        "limit_text": null,
+        "conditions": [],
+        "source_pages": [],
+        "evidence": null,
+        "confidence": 1.0,
+        "unverified_candidate": null
+      },
+      "organ_donor_expenses": {
+        "status": "not_mentioned",
+        "limit_amount": null,
+        "limit_percent_of_si": null,
+        "limit_days": null,
+        "limit_text": null,
+        "conditions": [],
+        "source_pages": [],
+        "evidence": null,
+        "confidence": 1.0,
+        "unverified_candidate": null
+      }
+    },
+    "infertility_ambulance": {
+      "infertility_treatment": {
+        "status": "not_mentioned",
+        "limit_amount": null,
+        "limit_percent_of_si": null,
+        "limit_days": null,
+        "limit_text": null,
+        "conditions": [],
+        "source_pages": [],
+        "evidence": null,
+        "confidence": 1.0,
+        "unverified_candidate": null
+      },
+      "surrogacy": {
+        "status": "not_mentioned",
+        "limit_amount": null,
+        "limit_percent_of_si": null,
+        "limit_days": null,
+        "limit_text": null,
+        "conditions": [],
+        "source_pages": [],
+        "evidence": null,
+        "confidence": 1.0,
+        "unverified_candidate": null
+      },
+      "ambulance_charges": {
+        "status": "limited",
+        "limit_amount": 1000,
+        "limit_percent_of_si": null,
+        "limit_days": null,
+        "limit_text": "INR 1000 per hospitalization",
+        "conditions": [],
+        "source_pages": [
+          3
+        ],
+        "evidence": "Emergency Ambulance | INR 1000 per hospitalization",
+        "confidence": 1.0,
+        "unverified_candidate": null
+      },
+      "air_ambulance": {
+        "status": "not_mentioned",
+        "limit_amount": null,
+        "limit_percent_of_si": null,
+        "limit_days": null,
+        "limit_text": null,
+        "conditions": [],
+        "source_pages": [],
+        "evidence": null,
+        "confidence": 1.0,
+        "unverified_candidate": null
+      }
+    },
+    "buffer_waiver": {
+      "corporate_buffer_amount": {
+        "status": "not_covered",
+        "limit_amount": null,
+        "limit_percent_of_si": null,
+        "limit_days": null,
+        "limit_text": "Not Covered",
+        "conditions": [
+          "Corporate Floater explicitly Not Covered in policy schedule"
+        ],
+        "source_pages": [
+          3
+        ],
+        "evidence": "Corporate Floater\nNot Covered",
+        "confidence": 1.0,
+        "unverified_candidate": null
+      },
+      "corporate_buffer_eligibility": null,
+      "disease_wise_capping": [
+        {
+          "disease": "Haemorrhoidectomy including Cost of stapler",
+          "limit_amount": 40000,
+          "limit_text": "40000",
+          "conditions": [],
+          "page": null,
+          "evidence": null
+        },
+        {
+          "disease": "Haemorrhoidectomy and Fissurectomy in a single sitting",
+          "limit_amount": 35000,
+          "limit_text": "35000",
+          "conditions": [],
+          "page": null,
+          "evidence": null
+        },
+        {
+          "disease": "Cholecystectomy",
+          "limit_amount": 35000,
+          "limit_text": "35000",
+          "conditions": [],
+          "page": null,
+          "evidence": null
+        },
+        {
+          "disease": "Hernioplasty/Herniorraphy- Unilateral including cost of mesh and tacker",
+          "limit_amount": 45000,
+          "limit_text": "45000",
+          "conditions": [],
+          "page": null,
+          "evidence": null
+        },
+        {
+          "disease": "Hernioplasty/Herniorraphy- Bilateral including Cost of mesh and tacker",
+          "limit_amount": 50000,
+          "limit_text": "50000",
+          "conditions": [],
+          "page": null,
+          "evidence": null
+        },
+        {
+          "disease": "URS (therapeutic) Including cost of laser treatment",
+          "limit_amount": 35000,
+          "limit_text": "35000",
+          "conditions": [],
+          "page": null,
+          "evidence": null
+        },
+        {
+          "disease": "PCNL- Unilateral",
+          "limit_amount": 50000,
+          "limit_text": "50000",
+          "conditions": [],
+          "page": null,
+          "evidence": null
+        },
+        {
+          "disease": "PCNL- Bilateral",
+          "limit_amount": 60000,
+          "limit_text": "60000",
+          "conditions": [],
+          "page": null,
+          "evidence": null
+        },
+        {
+          "disease": "Hydrocele",
+          "limit_amount": 25000,
+          "limit_text": "25000",
+          "conditions": [],
+          "page": null,
+          "evidence": null
+        },
+        {
+          "disease": "Appendicectomy",
+          "limit_amount": 45000,
+          "limit_text": "45000",
+          "conditions": [],
+          "page": null,
+          "evidence": null
+        },
+        {
+          "disease": "Cataract per eye including Cost of Lens",
+          "limit_amount": 25000,
+          "limit_text": "25000",
+          "conditions": [],
+          "page": null,
+          "evidence": null
+        },
+        {
+          "disease": "Hysterectomy (Abdominal/Vaginal)",
+          "limit_amount": 55000,
+          "limit_text": "55000",
+          "conditions": [],
+          "page": null,
+          "evidence": null
+        },
+        {
+          "disease": "Total Knee Replacement(Unilateral) including cost of implants",
+          "limit_amount": 100000,
+          "limit_text": "100000",
+          "conditions": [],
+          "page": null,
+          "evidence": null
+        },
+        {
+          "disease": "Total Knee Replacement (Bilateral) including cost of implants",
+          "limit_amount": 150000,
+          "limit_text": "150000",
+          "conditions": [],
+          "page": null,
+          "evidence": null
+        },
+        {
+          "disease": "Hip Replacement (Unilateral) including cost of implants",
+          "limit_amount": 100000,
+          "limit_text": "100000",
+          "conditions": [],
+          "page": null,
+          "evidence": null
+        },
+        {
+          "disease": "Hip Replacement (Bilateral) including cost of implants",
+          "limit_amount": 150000,
+          "limit_text": "150000",
+          "conditions": [],
+          "page": null,
+          "evidence": null
+        }
+      ],
+      "copay_sublimits": [
+        {
+          "item": "cyberknife treatment/Robotic Surgery/Bio-absorbabLe Stent/FAMETO Laser Suregry/Toric lens/KT Laser Prostate",
+          "type": "copay",
+          "limit_amount": null,
+          "amount": null,
+          "limit_percent": null,
+          "percent": 50.0,
+          "limit_text": null,
+          "applies_to": "3. 50% co-pay For cyberknife treatment/Robotic Surgery/Bio-absorbabLe Stent/FAMETO Laser Suregry/Toric lens/KT Laser Prostate.",
+          "exceptions": null,
+          "conditions": [],
+          "page": 3,
+          "evidence": "3. 50% co-pay For cyberknife treatment/Robotic Surgery/Bio-absorbabLe Stent/FAMETO Laser Suregry/Toric lens/KT Laser Prostate."
+        },
+        {
+          "item": "cyberknife treatment/Robotic Surgery/Bio-absorbabLe Stent/FAMETO Laser Suregry/Toric lens/KT Laser Prostate",
+          "type": "copay",
+          "limit_amount": null,
+          "amount": null,
+          "limit_percent": null,
+          "percent": 50.0,
+          "limit_text": null,
+          "applies_to": "|  | Special Conditions: 1. New born baby would be covered from the date of delivery provided we receive the endorsement within 90 days of delivery. 2. Claim for lasik treatment - if power of eye is a",
+          "exceptions": null,
+          "conditions": [],
+          "page": 3,
+          "evidence": "|  | Special Conditions: 1. New born baby would be covered from the date of delivery provided we receive the endorsement within 90 days of delivery. 2. Claim for lasik treatment - if power of eye is above +/- 7.5, is payable 3. 50% co-pay For cyberknife treatment/Robotic Surgery/Bio-absorbabLe Stent"
+        }
+      ],
+      "waiver_conditions": [
+        {
+          "waiver_name": "Pre-Existing Diseases (PED) Waiting Period",
+          "clause": "Pre-Existing Disease (PED) | Waived Off",
+          "page": 3,
+          "evidence": "Pre-Existing Disease (PED) | Waived Off"
+        },
+        {
+          "waiver_name": "Policy Clause Waiver",
+          "clause": "|  | Pre-Existing Disease (PED) | Waived Off |  |  |  |",
+          "page": 3,
+          "evidence": "|  | Pre-Existing Disease (PED) | Waived Off |  |  |  |"
+        },
+        {
+          "waiver_name": "Policy Clause Waiver",
+          "clause": "|  | 2 yr exclusions (Disease Specific Exclusions) | Waived Off |  |  |  |",
+          "page": 3,
+          "evidence": "|  | 2 yr exclusions (Disease Specific Exclusions) | Waived Off |  |  |  |"
+        },
+        {
+          "waiver_name": "Policy Clause Waiver",
+          "clause": "|  | Initial Waiting Period | Waived Off |  |  |  |",
+          "page": 3,
+          "evidence": "|  | Initial Waiting Period | Waived Off |  |  |  |"
+        },
+        {
+          "waiver_name": "Policy Clause Waiver",
+          "clause": "| Pre-Existing Disease (PED) | Waived Off |",
+          "page": 3,
+          "evidence": "| Pre-Existing Disease (PED) | Waived Off |"
+        },
+        {
+          "waiver_name": "Policy Clause Waiver",
+          "clause": "| 2 yr exclusions (Disease Specific Exclusions) | Waived Off |",
+          "page": 3,
+          "evidence": "| 2 yr exclusions (Disease Specific Exclusions) | Waived Off |"
+        },
+        {
+          "waiver_name": "Policy Clause Waiver",
+          "clause": "| Initial Waiting Period | Waived Off |",
+          "page": 3,
+          "evidence": "| Initial Waiting Period | Waived Off |"
+        }
+      ],
+      "source_pages": [
+        3
+      ],
+      "confidence": 1.0
+    }
+  },
+  "overall_confidence": 0.823,
+  "warnings": [
+    "GROUNDING GATE REJECT [features.room_hospitalization.icu_charges]: Evidence quote not found in document text with >= 90% match: 'Hospital Accommodation – Room rent/day & ICU/day | ICU | 2%...'",
+    "GROUNDING GATE REJECT [features.maternity.normal_delivery_metro]: Evidence quote not found in document text with >= 90% match: 'Normal: 25,000...'",
+    "GROUNDING GATE REJECT [features.maternity.normal_delivery_non_metro]: Evidence quote not found in document text with >= 90% match: 'Normal: 25,000...'",
+    "GROUNDING GATE REJECT [features.maternity.c_section_metro]: Evidence quote not found in document text with >= 90% match: 'C-Section: 35,000...'",
+    "GROUNDING GATE REJECT [features.maternity.c_section_non_metro]: Evidence quote not found in document text with >= 90% match: 'C-Section: 35,000...'",
+    "GROUNDING GATE REJECT [features.waiting_periods.thirty_day_waiting]: limit_days=30 not found in evidence and cited page text",
+    "GROUNDING GATE REJECT [features.waiting_periods.first_year_waiting]: limit_days=365 not found in evidence and cited page text",
+    "GROUNDING GATE REJECT [features.waiting_periods.second_year_waiting]: limit_days=730 not found in evidence and cited page text",
+    "VALIDATION: Demographics mismatch — stated total (20) != computed total (9).",
+    "Conflict detected: Schedule (p. 4) states Gross Premium Rs. 98,476, while Receipt/Section (p. 6) states Rs. 104,635."
+  ]
+}

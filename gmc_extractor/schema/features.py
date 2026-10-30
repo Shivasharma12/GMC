@@ -6,7 +6,7 @@ Metro/non-metro pairs are explicit named fields.
 """
 from __future__ import annotations
 
-from typing import Optional
+from typing import Any, Optional, Union
 
 from pydantic import BaseModel, Field
 
@@ -133,6 +133,33 @@ class DiseaseCapEntry(BaseModel):
     disease: str
     limit_amount: Optional[int] = None
     limit_text: Optional[str] = None
+    conditions: list[str] = Field(default_factory=list)
+    page: Optional[int] = None
+    evidence: Optional[str] = None
+
+
+class SublimitEntry(BaseModel):
+    """A generic co-pay, sub-limit or procedure-wise cap."""
+    item: str
+    type: Optional[str] = "sublimit"
+    limit_amount: Optional[int] = None
+    amount: Optional[int] = None
+    limit_percent: Optional[float] = None
+    percent: Optional[float] = None
+    limit_text: Optional[str] = None
+    applies_to: Optional[str] = None
+    exceptions: Optional[str] = None
+    conditions: list[str] = Field(default_factory=list)
+    page: Optional[int] = None
+    evidence: Optional[str] = None
+
+
+class WaiverEntry(BaseModel):
+    """A structured waiver condition with verbatim clause and page."""
+    waiver_name: str
+    clause: str
+    page: Optional[int] = None
+    evidence: Optional[str] = None
 
 
 class BufferWaiver(BaseModel):
@@ -149,7 +176,11 @@ class BufferWaiver(BaseModel):
         default_factory=list,
         description="List of disease → limit mappings.",
     )
-    waiver_conditions: list[str] = Field(
+    copay_sublimits: list[SublimitEntry] = Field(
+        default_factory=list,
+        description="Generic co-pays, sub-limits, or procedure caps found in document.",
+    )
+    waiver_conditions: list[Union[WaiverEntry, dict, str]] = Field(
         default_factory=list,
         description="Conditions under which waivers apply.",
     )

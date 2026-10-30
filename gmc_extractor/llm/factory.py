@@ -83,9 +83,16 @@ def get_client(
             rate_limiter=rate_limiter,
         )
     elif provider == "mock":
+        import os
+        if os.environ.get("ALLOW_MOCK_LLM") != "1":
+            raise RuntimeError(
+                "Mock LLM client is strictly prohibited outside unit test environments. "
+                "Never fabricate extraction results. Please configure a real LLM provider "
+                "(gemini, openai, ollama) or set ALLOW_MOCK_LLM=1 for pytest runs."
+            )
         from gmc_extractor.llm.mock_client import MockLLMClient
         model = model_override or "mock-model"
-        logger.info("Using Mock provider, model=%s", model)
+        logger.info("Using Mock provider (test mode: ALLOW_MOCK_LLM=1), model=%s", model)
         return MockLLMClient(model=model)
     else:
         raise ValueError(

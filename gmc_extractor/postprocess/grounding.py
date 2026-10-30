@@ -1,8 +1,18 @@
 """
 gmc_extractor/postprocess/grounding.py
-Verifies that numeric values and evidence quotes returned by the LLM
-actually appear in the retrieved source text.
-Uses rapidfuzz for fuzzy quote matching.
+Strict Grounding Gate:
+Verifies that numeric values, dates, percentages, and evidence quotes returned by LLM
+actually appear in the source text of the cited pages.
+
+Rules:
+(a) Evidence quote must exist in cited pages with fuzzy match ratio >= 0.90 (90%).
+(b) The normalized number/date/status in the value must appear in that evidence quote.
+(c) If grounding fails:
+    - Candidate moved to unverified_candidate dict
+    - status = "needs_review"
+    - confidence <= 0.3
+    - Main values (limit_amount, limit_text, limit_percent_of_si, limit_days, evidence) CLEARED.
+    - NEVER write ungrounded values as main values.
 """
 from __future__ import annotations
 
@@ -16,10 +26,9 @@ from gmc_extractor.pdf.reader import PageDoc
 
 logger = logging.getLogger(__name__)
 
-# Minimum fuzzy match score for evidence quotes (0-100)
-_EVIDENCE_MATCH_THRESHOLD = 65
-# Confidence penalty for failed grounding
-_GROUNDING_PENALTY = 0.25
+# Strict fuzzy match threshold for evidence quotes (0-100)
+_EVIDENCE_MATCH_THRESHOLD = 90
+_MIN_EVIDENCE_LEN = 10
 
 
 def ground_result(
@@ -28,19 +37,9 @@ def ground_result(
     warnings: list[str],
 ) -> dict[str, Any]:
     """
-    Walk the result dict and verify grounding for all FeatureValue-like
-    sub-dicts. Lowers confidence on failures and appends warnings.
-    NEVER deletes values.
-
-    Args:
-        result_dict: The extraction result dict (model.model_dump()).
-        pages: All PDF pages (for full-text lookup).
-        warnings: Mutable warnings list.
-
-    Returns:
-        Modified result dict with updated confidence values.
+    Walk the result dict and apply the strict Grounding Gate to all
+    FeatureValue-like sub-dicts.
     """
-    # Build a lookup of page_num -> text
     page_texts: dict[int, str] = {p.page_num: p.full_text for p in pages}
     _ground_recursive(result_dict, page_texts, warnings, path="")
     return result_dict
@@ -56,10 +55,9 @@ def _ground_recursive(
     if not isinstance(obj, dict):
         return
 
-    # Check if this looks like a FeatureValue (has evidence + source_pages + confidence)
+    # Check if this looks like a FeatureValue or grounded entity
     if "evidence" in obj and "source_pages" in obj and "confidence" in obj:
         _ground_feature_value(obj, page_texts, warnings, path)
-        return
 
     # Recurse into all dict values
     for k, v in obj.items():
@@ -77,72 +75,117 @@ def _ground_feature_value(
     warnings: list[str],
     path: str,
 ) -> None:
-    """Ground a single FeatureValue dict."""
+    """
+    Apply strict Grounding Gate to a single FeatureValue:
+    - Requires fuzzy match >= 90 for evidence quote in cited pages
+    - Requires number/date/percentage to appear in evidence quote
+    - On failure, sets status='needs_review', confidence<=0.3, clears main value.
+    """
+    status = fv.get("status")
+    # If not_mentioned or not_covered without a claim of limit, grounding is not required to match numbers
+    if status == "not_mentioned" and not fv.get("evidence"):
+        return
+
     source_pages: list[int] = fv.get("source_pages", [])
     evidence: str | None = fv.get("evidence")
     limit_amount: int | None = fv.get("limit_amount")
-    confidence: float = fv.get("confidence", 0.0)
+    limit_percent: float | None = fv.get("limit_percent_of_si")
+    limit_days: int | None = fv.get("limit_days")
+    limit_text: str | None = fv.get("limit_text")
 
-    # Build source text from cited pages
-    source_text = " ".join(page_texts.get(pn, "") for pn in source_pages)
+    failure_reasons: list[str] = []
 
-    grounding_ok = True
+    # ── Check 1: Evidence existence in cited pages (fuzzy >= 90) ───────────────
+    matching_pages: list[int] = []
+    if evidence and len(evidence.strip()) >= _MIN_EVIDENCE_LEN:
+        ev_clean = evidence.strip().lower()
+        for pn, ptext in page_texts.items():
+            pt_clean = ptext.lower()
+            if ev_clean in pt_clean:
+                matching_pages.append(pn)
+            elif fuzz.partial_ratio(ev_clean, pt_clean) >= _EVIDENCE_MATCH_THRESHOLD:
+                matching_pages.append(pn)
 
-    # ── Check evidence quote ──────────────────────────────────────────────
-    if evidence and source_text:
-        score = fuzz.partial_ratio(evidence.lower(), source_text.lower())
-        if score < _EVIDENCE_MATCH_THRESHOLD:
-            msg = (
-                f"Grounding FAIL [{path}]: evidence quote not found in source pages "
-                f"(score={score}). Evidence: '{evidence[:80]}...'"
+        if matching_pages:
+            matched_cited = [pn for pn in source_pages if pn in matching_pages]
+            fv["source_pages"] = matched_cited if matched_cited else matching_pages
+        else:
+            failure_reasons.append(
+                f"Evidence quote not found in document text with >= 90% match: '{evidence[:60]}...'"
             )
-            logger.warning(msg)
-            warnings.append(msg)
-            grounding_ok = False
+    elif status in ("covered", "limited", "waived_off") and (limit_amount is not None or limit_text is not None):
+        failure_reasons.append("Evidence quote is missing or too short for a covered benefit")
 
-    # ── Check numeric amount ──────────────────────────────────────────────
-    if limit_amount is not None and source_text:
-        # Look for the number (with common formatting variants) in source
-        if not _number_in_text(limit_amount, source_text):
-            msg = (
-                f"Grounding FAIL [{path}]: limit_amount={limit_amount} "
-                f"not found in cited pages {source_pages}."
-            )
-            logger.warning(msg)
-            warnings.append(msg)
-            grounding_ok = False
+    # ── Check 2: Value token containment in evidence & page text ──────────────
+    source_page_text = " ".join(page_texts.get(pn, "") for pn in fv.get("source_pages", []))
 
-    # Apply penalty
-    if not grounding_ok:
-        new_conf = max(0.0, confidence - _GROUNDING_PENALTY)
-        fv["confidence"] = new_conf
-        if "conditions" not in fv:
-            fv["conditions"] = []
-        fv["conditions"].append("WARNING: grounding check failed — value may be inaccurate")
+    if limit_amount is not None:
+        if not _number_in_text(limit_amount, evidence or "") or not _number_in_text(limit_amount, source_page_text):
+            failure_reasons.append(f"Numeric limit_amount={limit_amount} not found in evidence or cited page text")
+
+    if limit_percent is not None:
+        pct_int = int(limit_percent)
+        has_pct_ev = f"{pct_int}%" in (evidence or "") or f"{pct_int} %" in (evidence or "") or str(pct_int) in (evidence or "")
+        has_pct_page = f"{pct_int}%" in source_page_text or f"{pct_int} %" in source_page_text or str(pct_int) in source_page_text
+        if not (has_pct_ev and has_pct_page):
+            failure_reasons.append(f"Percentage limit_percent={limit_percent}% not found in evidence and cited page text")
+
+    if limit_days is not None:
+        if str(limit_days) not in (evidence or "") or str(limit_days) not in source_page_text:
+            failure_reasons.append(f"limit_days={limit_days} not found in evidence and cited page text")
+
+    # ── Strict Grounding Gate Decision ────────────────────────────────────────
+    if failure_reasons:
+        msg = f"GROUNDING GATE REJECT [{path}]: {'; '.join(failure_reasons)}"
+        logger.warning(msg)
+        warnings.append(msg)
+
+        # Move to unverified candidate
+        fv["unverified_candidate"] = {
+            "status": status,
+            "limit_amount": limit_amount,
+            "limit_text": limit_text,
+            "limit_percent_of_si": limit_percent,
+            "limit_days": limit_days,
+            "evidence": evidence,
+            "reasons": failure_reasons,
+        }
+
+        # Clear main value fields so fabricated data NEVER gets exported to QMS main values
+        fv["status"] = "needs_review"
+        fv["limit_amount"] = None
+        fv["limit_text"] = None
+        fv["limit_percent_of_si"] = None
+        fv["limit_days"] = None
+        fv["evidence"] = None
+        fv["source_pages"] = []
+        fv["confidence"] = min(fv.get("confidence", 0.2), 0.2)
+
+        conds = fv.setdefault("conditions", [])
+        reject_note = "GROUNDING_GATE_FAILED: Candidate value rejected — does not exist in source text"
+        if reject_note not in conds:
+            conds.append(reject_note)
 
 
 def _number_in_text(amount: int, text: str) -> bool:
     """
     Check if *amount* (in rupees) appears in *text* in any common format.
-    Handles: "500000", "5,00,000", "5 lakh", "5L".
+    Handles: "500000", "5,00,000", "5 lakh", "5L", "5 Lacs".
     """
-    # Plain integer
-    if str(amount) in text.replace(",", ""):
+    text_clean = text.replace(",", "")
+    if str(amount) in text_clean:
         return True
 
-    # Indian comma format
     formatted = _format_indian(amount)
     if formatted in text:
         return True
 
-    # Lakh representation
     if amount >= 100_000 and amount % 100_000 == 0:
         lakhs = amount // 100_000
-        for variant in [f"{lakhs} lakh", f"{lakhs} lac", f"{lakhs}L", f"{lakhs} L"]:
+        for variant in [f"{lakhs} lakh", f"{lakhs} lac", f"{lakhs}l", f"{lakhs} l", f"{lakhs} lacs"]:
             if variant.lower() in text.lower():
                 return True
 
-    # Crore representation
     if amount >= 10_000_000 and amount % 10_000_000 == 0:
         crores = amount // 10_000_000
         for variant in [f"{crores} crore", f"{crores} cr"]:

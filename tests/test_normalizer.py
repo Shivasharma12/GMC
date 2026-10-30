@@ -117,5 +117,9 @@ class TestParseDate:
     def test_full_month_no_suffix(self):
         assert parse_date("1 January 2025") == "2025-01-01"
 
+    def test_mdy_alpha(self):
+        assert parse_date("April 26, 2024") == "2024-04-26"
+        assert parse_date("Apr 26, 2024") == "2024-04-26"
+
     def test_none_on_garbage(self):
         assert parse_date("no date here") is None

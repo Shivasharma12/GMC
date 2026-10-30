@@ -58,6 +58,13 @@ def clean_pages(pages: list[PageDoc]) -> list[PageDoc]:
     return pages
 
 
+_PROTECTED_BENEFIT_TOKENS = {
+    "sum insured", "room rent", "maternity", "waiting period",
+    "pre-existing", "day care", "ambulance", "premium", "rupees",
+    "lakh", "deductible", "co-pay", "copay", "annexure", "schedule",
+}
+
+
 def _find_repeated_lines(pages: list[PageDoc]) -> set[str]:
     """Identify lines that appear verbatim on 3+ pages (headers/footers)."""
     line_counts: Counter[str] = Counter()
@@ -70,7 +77,11 @@ def _find_repeated_lines(pages: list[PageDoc]) -> set[str]:
                 line_counts[stripped] += 1
                 seen_on_this_page.add(stripped)
 
-    repeated = {line for line, cnt in line_counts.items() if cnt >= _REPEAT_THRESHOLD}
+    repeated = {
+        line for line, cnt in line_counts.items()
+        if cnt >= _REPEAT_THRESHOLD
+        and not any(tok in line.lower() for tok in _PROTECTED_BENEFIT_TOKENS)
+    }
     if repeated:
         logger.debug("Suppressing %d repeated header/footer lines", len(repeated))
     return repeated

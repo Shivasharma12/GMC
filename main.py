@@ -7,8 +7,22 @@ Usage:
 """
 from __future__ import annotations
 
+import sys
 from pathlib import Path
 from typing import Optional
+
+# Reconfigure stdout/stderr to UTF-8 on Windows
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+
+import os
+# Fix httpx bug where unbracketed IPv6 entries like '::1' in NO_PROXY cause InvalidURL: Invalid port: ':1'
+for _var in ("NO_PROXY", "no_proxy"):
+    _val = os.environ.get(_var)
+    if _val:
+        os.environ[_var] = ",".join([e.strip() for e in _val.split(",") if ":" not in e and e.strip()])
 
 import typer
 from rich.console import Console
@@ -44,7 +58,7 @@ def _setup(verbose: bool, provider: Optional[str], model: Optional[str], no_cach
             provider_override=provider,
             model_override=model,
         )
-    except ValueError as exc:
+    except (ValueError, RuntimeError) as exc:
         console.print(f"[bold red]Configuration error:[/bold red] {exc}")
         raise typer.Exit(1)
     return settings, client
@@ -139,6 +153,18 @@ def inspect(
         console.print(tbl)
 
 
+@app.command()
+def serve(
+    host: str = typer.Option("127.0.0.1", "--host", "-h", help="Host interface to bind to."),
+    port: int = typer.Option(8000, "--port", "-p", help="Port to listen on."),
+    reload: bool = typer.Option(False, "--reload", "-r", help="Enable reload on changes."),
+) -> None:
+    """Start the GMC Extractor API and Dashboard server."""
+    from server import run_server
+    console.print(f"[bold green]Starting GMC Extractor Server on http://{host}:{port}[/bold green]")
+    run_server(host=host, port=port, reload=reload)
+
+
 def _print_summary_table(results: list, settings) -> None:
     """Print a Rich summary table of extraction results."""
     from gmc_extractor.schema.output import ExtractionResult
@@ -163,3 +189,4 @@ def _print_summary_table(results: list, settings) -> None:
 
 if __name__ == "__main__":
     app()
+

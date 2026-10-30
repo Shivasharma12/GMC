@@ -1,0 +1,1213 @@
+[
+  {
+    "qms_field": "IDENT_INSURER",
+    "label": "Insurer Name",
+    "status": "covered",
+    "limit_amount": null,
+    "limit_text": "Niva Bupa Health Insurance Company Limited",
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [
+      3
+    ],
+    "evidence": "Agent name Hii Insurance Broking Services Private Limited Agent code BR03300001 Agent contact number NA Claims Administrator Niva Bupa Health Insurance Company Limited (formerly known as Max Bupa Health Insurance Company Limited) | Agent name | Hii Insurance Broking Services Private Limited",
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "IDENT_TPA",
+    "label": "TPA Name",
+    "status": "not_covered",
+    "limit_amount": null,
+    "limit_text": "None (claims handled in-house by insurer)",
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [
+      "None (claims handled in-house by insurer)"
+    ],
+    "source_pages": [
+      3
+    ],
+    "evidence": "Agent name Hii Insurance Broking Services Private Limited Agent code BR03300001 Agent contact number NA Claims Administrator Niva Bupa Health Insurance Company Limited (formerly known as Max Bupa Health Insurance Company Limited) | Agent name | Hii Insurance Broking Services Private Limited",
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "POL_NUMBER",
+    "label": "Policy Number",
+    "status": "covered",
+    "limit_amount": null,
+    "limit_text": "00600900202301",
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [
+      3
+    ],
+    "evidence": "Policy Document – Health Plus Schedule of Insurance Certificate Issuing office National Operating Centre - NOIDA Policyholder's name Myndloop Tech Private Limited Policyholder's address No 215 7th B Main Road BENGALURU Karnataka - 560043 Policy number 00600900202301 First Policy inception date 01-August-2023 Date and time of Policy commencement 01-August-2023 Date and time of Policy expiry 31-July-2024",
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "POL_PREV_INCEPTION",
+    "label": "Previous Year Inception Date",
+    "status": "covered",
+    "limit_amount": null,
+    "limit_text": "2023-08-01",
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [
+      "Treated uploaded document start date as previous inception date per expiring policy baseline rule"
+    ],
+    "source_pages": [
+      3
+    ],
+    "evidence": "Policy Document – Health Plus Schedule of Insurance Certificate Issuing office National Operating Centre - NOIDA Policyholder's name Myndloop Tech Private Limited Policyholder's address No 215 7th B Main Road BENGALURU Karnataka - 560043 Policy number 00600900202301 First Policy inception date 01-August-2023 Date and time of Policy commencement 01-August-2023 Date and time of Policy expiry 31-July-2024",
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "POL_START_DATE",
+    "label": "Policy Start Date",
+    "status": "covered",
+    "limit_amount": null,
+    "limit_text": "2023-08-01",
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [
+      3
+    ],
+    "evidence": "Policy Document – Health Plus Schedule of Insurance Certificate Issuing office National Operating Centre - NOIDA Policyholder's name Myndloop Tech Private Limited Policyholder's address No 215 7th B Main Road BENGALURU Karnataka - 560043 Policy number 00600900202301 First Policy inception date 01-August-2023 Date and time of Policy commencement 01-August-2023 Date and time of Policy expiry 31-July-2024",
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "POL_END_DATE",
+    "label": "Policy End Date",
+    "status": "covered",
+    "limit_amount": null,
+    "limit_text": "2024-07-31",
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [
+      3
+    ],
+    "evidence": "Policy Document – Health Plus Schedule of Insurance Certificate Issuing office National Operating Centre - NOIDA Policyholder's name Myndloop Tech Private Limited Policyholder's address No 215 7th B Main Road BENGALURU Karnataka - 560043 Policy number 00600900202301 First Policy inception date 01-August-2023 Date and time of Policy commencement 01-August-2023 Date and time of Policy expiry 31-July-2024",
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "POL_TENURE_MONTHS",
+    "label": "Policy Tenure (months)",
+    "status": "covered",
+    "limit_amount": 12,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [
+      "Derived from policy start and end dates"
+    ],
+    "source_pages": [
+      5
+    ],
+    "evidence": "56-60 yrs | 12,056",
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "POL_PREMIUM_EXCL_GST",
+    "label": "Premium (excluding GST)",
+    "status": "covered",
+    "limit_amount": 83454,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [
+      4
+    ],
+    "evidence": "83,454 Integrated Goods and Service Tax (18%) 15,022 Central Goods and Service Tax (9%) 0 Duties and cess (Rs",
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "POL_PREMIUM_INCL_GST",
+    "label": "Premium (including GST)",
+    "status": "covered",
+    "limit_amount": 98476,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [
+      4
+    ],
+    "evidence": "98,476 Gross premium (Rs",
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "POL_SI_TIERS",
+    "label": "Sum Insured Tiers",
+    "status": "covered",
+    "limit_amount": null,
+    "limit_text": [
+      500000
+    ],
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [
+      3
+    ],
+    "evidence": "If the Insured Person is admitted in the Hospital in a room category or in a room where the Room Rent is higher than the eligibility as specified above, then Niva Bupa shall be liable to pay only a pro-rated proportion of the total Associated Medical Expenses (including surcharge or taxes thereon) in the proportion of the difference between the Room Rent actually incurred and the entitled room category/eligible Room Rent",
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "POL_TOTAL_SUM_INSURED",
+    "label": "Total Sum Insured (Aggregate)",
+    "status": "not_mentioned",
+    "limit_amount": null,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": null
+  },
+  {
+    "qms_field": "FAM_EMPLOYEE",
+    "label": "Family - Employee Covered",
+    "status": "covered",
+    "limit_amount": null,
+    "limit_text": "True",
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [
+      3
+    ],
+    "evidence": "Maternity Expenses Benefit is available for Employees or Spouse only if both are covered in Insured members data received from Policyholder",
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "FAM_SPOUSE",
+    "label": "Family - Spouse Covered",
+    "status": "covered",
+    "limit_amount": null,
+    "limit_text": "True",
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [
+      3
+    ],
+    "evidence": "Maternity Expenses Benefit is available for Employees or Spouse only if both are covered in Insured members data received from Policyholder",
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "FAM_CHILDREN",
+    "label": "Family - Children Covered",
+    "status": "covered",
+    "limit_amount": null,
+    "limit_text": "True",
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [
+      3
+    ],
+    "evidence": "Maternity Expenses Benefit is available for Employees or Spouse only if both are covered in Insured members data received from Policyholder",
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "FAM_PARENTS",
+    "label": "Family - Parents Covered",
+    "status": "not_covered",
+    "limit_amount": null,
+    "limit_text": "False",
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [
+      "Derived: not covered per family definition in policy"
+    ],
+    "source_pages": [
+      3
+    ],
+    "evidence": "Maternity Expenses Benefit is available for Employees or Spouse only if both are covered in Insured members data received from Policyholder",
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "FAM_PARENTS_IN_LAW",
+    "label": "Family - Parents-in-Law Covered",
+    "status": "not_covered",
+    "limit_amount": null,
+    "limit_text": "False",
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [
+      "Derived: not covered per family definition in policy"
+    ],
+    "source_pages": [
+      3
+    ],
+    "evidence": "Maternity Expenses Benefit is available for Employees or Spouse only if both are covered in Insured members data received from Policyholder",
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "DEM_EMPLOYEES",
+    "label": "Number of Employees",
+    "status": "covered",
+    "limit_amount": 9,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [
+      3
+    ],
+    "evidence": "Policy Document – Health Plus Schedule of Insurance Certificate Issuing office National Operating Centre - NOIDA Policyholder's name Myndloop Tech Private Limited Policyholder's address No 215 7th B Main Road BENGALURU Karnataka - 560043 Policy number 00600900202301 First Policy inception date 01-August-2023 Date and time of Policy commencement 01-August-2023 Date and time of Policy expiry 31-July-2024",
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "DEM_DEPENDENTS",
+    "label": "Number of Dependents",
+    "status": "covered",
+    "limit_amount": 11,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [
+      1
+    ],
+    "evidence": "Customer ID: 0010053111",
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "DEM_SPOUSES",
+    "label": "Number of Spouses",
+    "status": "not_mentioned",
+    "limit_amount": null,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [
+      "member-wise annexure not present in document"
+    ],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": null
+  },
+  {
+    "qms_field": "DEM_CHILDREN",
+    "label": "Number of Children",
+    "status": "not_mentioned",
+    "limit_amount": null,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [
+      "member-wise annexure not present in document"
+    ],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": null
+  },
+  {
+    "qms_field": "DEM_PARENTS",
+    "label": "Number of Parents / Parents-in-Law",
+    "status": "not_mentioned",
+    "limit_amount": null,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [
+      "member-wise annexure not present in document"
+    ],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": null
+  },
+  {
+    "qms_field": "DEM_TOTAL_STATED",
+    "label": "Total Lives (as stated in policy)",
+    "status": "covered",
+    "limit_amount": 20,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [
+      3
+    ],
+    "evidence": "Policy Document – Health Plus Schedule of Insurance Certificate Issuing office National Operating Centre - NOIDA Policyholder's name Myndloop Tech Private Limited Policyholder's address No 215 7th B Main Road BENGALURU Karnataka - 560043 Policy number 00600900202301 First Policy inception date 01-August-2023 Date and time of Policy commencement 01-August-2023 Date and time of Policy expiry 31-July-2024",
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "DEM_TOTAL_COMPUTED",
+    "label": "Total Lives (computed)",
+    "status": "covered",
+    "limit_amount": 20,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [
+      "Computed from employee + dependent counts"
+    ],
+    "source_pages": [
+      3
+    ],
+    "evidence": "Disease wise capping | Haemorrhoidectomy including Cost of stapler- 40000, Haemorrhoidectomy and Fissurectomy in a single sitting-35000, Cholecystectomy- 35000, Hernioplasty/Herniorraphy- Unilateral including cost of mesh and tacker- 45000, Hernioplasty/Herniorraphy- Bilateral including Cost of mesh and tacker-50000, URS (therapeutic) Including cost of laser treatment-35000, PCNL- Unilateral-50000, PCNL- Bilateral-60000, Hydrocele-25000,Appendicectomy-45000, Cataract per eye including Cost of Lens-25000, Hysterectomy (Abdominal/Vaginal)-55000, Total Knee Replacement(Unilateral) including cost of implants-100000, Total Knee Replacement (Bilateral) including cost of implants-150000, Hip Replacement (Unilateral) including cost of implants-100000, Hip Replacement (Bilateral) including cost of implants-150000",
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "ROOM_RENT",
+    "label": "Room Rent Limit",
+    "status": "limited",
+    "limit_amount": null,
+    "limit_text": "1%",
+    "limit_percent_of_si": 1.0,
+    "limit_days": null,
+    "conditions": [
+      "If the Insured Person is admitted in the Hospital in a room category or in a room where the Room Rent is higher than the eligibility as specified above, then Niva Bupa shall be liable to pay only a pro-rated proportion of the total Associated Medical Expenses (including surcharge or taxes thereon) in the proportion of the difference between the Room Rent actually incurred and the entitled room category/eligible Room Rent."
+    ],
+    "source_pages": [
+      3
+    ],
+    "evidence": "Hospital Accommodation – Room rent/day & ICU/day | Normal | 1%",
+    "confidence": 0.98
+  },
+  {
+    "qms_field": "ROOM_ICU",
+    "label": "ICU Charges Limit",
+    "status": "needs_review",
+    "limit_amount": null,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [
+      "GROUNDING_GATE_FAILED: Candidate value rejected — does not exist in source text"
+    ],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": 0.2,
+    "unverified_candidate": {
+      "status": "limited",
+      "limit_amount": null,
+      "limit_text": "2%",
+      "limit_percent_of_si": 2.0,
+      "limit_days": null,
+      "evidence": "Hospital Accommodation – Room rent/day & ICU/day | ICU | 2%",
+      "reasons": [
+        "Evidence quote not found in document text with >= 90% match: 'Hospital Accommodation – Room rent/day & ICU/day | ICU | 2%...'"
+      ]
+    }
+  },
+  {
+    "qms_field": "ROOM_PRE_HOSP_DAYS",
+    "label": "Pre-Hospitalisation Days",
+    "status": "covered",
+    "limit_amount": null,
+    "limit_text": "Covered upto Sum Insured for 30 days",
+    "limit_percent_of_si": null,
+    "limit_days": 30,
+    "conditions": [],
+    "source_pages": [
+      3
+    ],
+    "evidence": "Pre Hospitalization Medical Expenses | Covered upto Sum Insured for 30 days",
+    "confidence": 0.98
+  },
+  {
+    "qms_field": "ROOM_POST_HOSP_DAYS",
+    "label": "Post-Hospitalisation Days",
+    "status": "covered",
+    "limit_amount": null,
+    "limit_text": "Covered upto Sum Insured for 60 days",
+    "limit_percent_of_si": null,
+    "limit_days": 60,
+    "conditions": [],
+    "source_pages": [
+      3
+    ],
+    "evidence": "Post Hospitalization Medical Expenses | Covered upto Sum Insured for 60 days",
+    "confidence": 0.98
+  },
+  {
+    "qms_field": "MAT_9M_WAIT",
+    "label": "Maternity 9-Month Waiting Period",
+    "status": "waived_off",
+    "limit_amount": null,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [
+      "Maternity Expenses Benefit is available for Employees or Spouse only if both are covered in Insured members data received from Policyholder.",
+      "The Maternity Benefit may be claimed under the Policy in respect of eligible Insured Person(s) only twice during the lifetime of the Policy including any Renewal thereafter for the delivery of a child or Medically Necessary Treatment and lawful termination of pregnancy up to maximum of 2 pregnancies or terminations."
+    ],
+    "source_pages": [
+      3
+    ],
+    "evidence": "Waived Off",
+    "confidence": 0.95
+  },
+  {
+    "qms_field": "MAT_BABY_DAY1",
+    "label": "Baby Day One Cover",
+    "status": "covered",
+    "limit_amount": null,
+    "limit_text": "New born baby would be covered from the date of delivery provided we receive the endorsement within 90 days of delivery",
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [
+      "New born baby would be covered from the date of delivery provided we receive the endorsement within 90 days of delivery."
+    ],
+    "source_pages": [
+      3
+    ],
+    "evidence": "1. New born baby would be covered from the date of delivery provided we receive the endorsement within 90 days of delivery.",
+    "confidence": 0.98
+  },
+  {
+    "qms_field": "MAT_VACCINATION",
+    "label": "Baby Vaccination Cover",
+    "status": "not_covered",
+    "limit_amount": null,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": 0.5
+  },
+  {
+    "qms_field": "MAT_NORMAL_METRO",
+    "label": "Maternity - Normal Delivery (Metro)",
+    "status": "needs_review",
+    "limit_amount": null,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [
+      "Same limit for metro and non-metro",
+      "Maternity Expenses Benefit is available for Employees or Spouse only if both are covered in Insured members data received from Policyholder.",
+      "The Maternity Benefit may be claimed under the Policy in respect of eligible Insured Person(s) only twice during the lifetime of the Policy including any Renewal thereafter for the delivery of a child or Medically Necessary Treatment and lawful termination of pregnancy up to maximum of 2 pregnancies or terminations.",
+      "GROUNDING_GATE_FAILED: Candidate value rejected — does not exist in source text"
+    ],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": 0.2,
+    "unverified_candidate": {
+      "status": "limited",
+      "limit_amount": 25000,
+      "limit_text": "Same limit for metro and non-metro",
+      "limit_percent_of_si": null,
+      "limit_days": null,
+      "evidence": "Normal: 25,000",
+      "reasons": [
+        "Evidence quote not found in document text with >= 90% match: 'Normal: 25,000...'"
+      ]
+    }
+  },
+  {
+    "qms_field": "MAT_NORMAL_NON_METRO",
+    "label": "Maternity - Normal Delivery (Non-Metro)",
+    "status": "needs_review",
+    "limit_amount": null,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [
+      "Same limit for metro and non-metro",
+      "Maternity Expenses Benefit is available for Employees or Spouse only if both are covered in Insured members data received from Policyholder.",
+      "The Maternity Benefit may be claimed under the Policy in respect of eligible Insured Person(s) only twice during the lifetime of the Policy including any Renewal thereafter for the delivery of a child or Medically Necessary Treatment and lawful termination of pregnancy up to maximum of 2 pregnancies or terminations.",
+      "GROUNDING_GATE_FAILED: Candidate value rejected — does not exist in source text"
+    ],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": 0.2,
+    "unverified_candidate": {
+      "status": "limited",
+      "limit_amount": 25000,
+      "limit_text": "Same limit for metro and non-metro",
+      "limit_percent_of_si": null,
+      "limit_days": null,
+      "evidence": "Normal: 25,000",
+      "reasons": [
+        "Evidence quote not found in document text with >= 90% match: 'Normal: 25,000...'"
+      ]
+    }
+  },
+  {
+    "qms_field": "MAT_CSEC_METRO",
+    "label": "Maternity - C-Section (Metro)",
+    "status": "needs_review",
+    "limit_amount": null,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [
+      "Same limit for metro and non-metro",
+      "Maternity Expenses Benefit is available for Employees or Spouse only if both are covered in Insured members data received from Policyholder.",
+      "The Maternity Benefit may be claimed under the Policy in respect of eligible Insured Person(s) only twice during the lifetime of the Policy including any Renewal thereafter for the delivery of a child or Medically Necessary Treatment and lawful termination of pregnancy up to maximum of 2 pregnancies or terminations.",
+      "GROUNDING_GATE_FAILED: Candidate value rejected — does not exist in source text"
+    ],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": 0.2,
+    "unverified_candidate": {
+      "status": "limited",
+      "limit_amount": 35000,
+      "limit_text": "Same limit for metro and non-metro",
+      "limit_percent_of_si": null,
+      "limit_days": null,
+      "evidence": "C-Section: 35,000",
+      "reasons": [
+        "Evidence quote not found in document text with >= 90% match: 'C-Section: 35,000...'"
+      ]
+    }
+  },
+  {
+    "qms_field": "MAT_CSEC_NON_METRO",
+    "label": "Maternity - C-Section (Non-Metro)",
+    "status": "needs_review",
+    "limit_amount": null,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [
+      "Same limit for metro and non-metro",
+      "Maternity Expenses Benefit is available for Employees or Spouse only if both are covered in Insured members data received from Policyholder.",
+      "The Maternity Benefit may be claimed under the Policy in respect of eligible Insured Person(s) only twice during the lifetime of the Policy including any Renewal thereafter for the delivery of a child or Medically Necessary Treatment and lawful termination of pregnancy up to maximum of 2 pregnancies or terminations.",
+      "GROUNDING_GATE_FAILED: Candidate value rejected — does not exist in source text"
+    ],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": 0.2,
+    "unverified_candidate": {
+      "status": "limited",
+      "limit_amount": 35000,
+      "limit_text": "Same limit for metro and non-metro",
+      "limit_percent_of_si": null,
+      "limit_days": null,
+      "evidence": "C-Section: 35,000",
+      "reasons": [
+        "Evidence quote not found in document text with >= 90% match: 'C-Section: 35,000...'"
+      ]
+    }
+  },
+  {
+    "qms_field": "WAIT_30DAY",
+    "label": "30-Day Initial Waiting Period",
+    "status": "needs_review",
+    "limit_amount": null,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [
+      "GROUNDING_GATE_FAILED: Candidate value rejected — does not exist in source text"
+    ],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": 0.2,
+    "unverified_candidate": {
+      "status": "waived_off",
+      "limit_amount": null,
+      "limit_text": null,
+      "limit_percent_of_si": null,
+      "limit_days": 30,
+      "evidence": "Initial Waiting Period | Waived Off",
+      "reasons": [
+        "limit_days=30 not found in evidence and cited page text"
+      ]
+    }
+  },
+  {
+    "qms_field": "WAIT_1YEAR",
+    "label": "1st Year Specific Disease Waiting Period",
+    "status": "needs_review",
+    "limit_amount": null,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [
+      "GROUNDING_GATE_FAILED: Candidate value rejected — does not exist in source text"
+    ],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": 0.2,
+    "unverified_candidate": {
+      "status": "waived_off",
+      "limit_amount": null,
+      "limit_text": null,
+      "limit_percent_of_si": null,
+      "limit_days": 365,
+      "evidence": "2 yr exclusions (Disease Specific Exclusions) | Waived Off",
+      "reasons": [
+        "limit_days=365 not found in evidence and cited page text"
+      ]
+    }
+  },
+  {
+    "qms_field": "WAIT_2YEAR",
+    "label": "2nd Year Specific Disease Waiting Period",
+    "status": "needs_review",
+    "limit_amount": null,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [
+      "GROUNDING_GATE_FAILED: Candidate value rejected — does not exist in source text"
+    ],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": 0.2,
+    "unverified_candidate": {
+      "status": "waived_off",
+      "limit_amount": null,
+      "limit_text": null,
+      "limit_percent_of_si": null,
+      "limit_days": 730,
+      "evidence": "2 yr exclusions (Disease Specific Exclusions) | Waived Off",
+      "reasons": [
+        "limit_days=730 not found in evidence and cited page text"
+      ]
+    }
+  },
+  {
+    "qms_field": "WAIT_PED",
+    "label": "Pre-Existing Disease (PED) Waiting Period",
+    "status": "waived_off",
+    "limit_amount": null,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [
+      3
+    ],
+    "evidence": "Pre-Existing Disease (PED) | Waived Off",
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "BEN_DAYCARE",
+    "label": "Day Care Procedures",
+    "status": "covered",
+    "limit_amount": null,
+    "limit_text": "Covered upto Sum Insured",
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [
+      3
+    ],
+    "evidence": "Listed Day Care Treatment | Covered upto Sum Insured",
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "BEN_OPD",
+    "label": "OPD Benefit",
+    "status": "not_covered",
+    "limit_amount": null,
+    "limit_text": "Not Covered",
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [
+      "OPD Coverage explicitly Not Covered in policy schedule"
+    ],
+    "source_pages": [
+      3
+    ],
+    "evidence": "OPD Coverage | Not Covered",
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "BEN_TELECONSULT",
+    "label": "Teleconsultation",
+    "status": "not_mentioned",
+    "limit_amount": null,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": 0.5
+  },
+  {
+    "qms_field": "BEN_PHARMACY",
+    "label": "Pharmacy Discount",
+    "status": "not_mentioned",
+    "limit_amount": null,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": 0.5
+  },
+  {
+    "qms_field": "BEN_DOMICILIARY",
+    "label": "Domiciliary Hospitalisation",
+    "status": "not_mentioned",
+    "limit_amount": null,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": 0.5
+  },
+  {
+    "qms_field": "BEN_HEALTH_CHECK",
+    "label": "Annual Health Check-Up",
+    "status": "not_mentioned",
+    "limit_amount": null,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": 0.5
+  },
+  {
+    "qms_field": "BEN_MODERN_TREAT",
+    "label": "Modern / Advanced Treatment",
+    "status": "limited",
+    "limit_amount": null,
+    "limit_text": "50% co-pay for cyberknife treatment/Robotic Surgery/Bio-absorbable Stent/FAMETO Laser Surgery/Toric lens/KT Laser Prostate",
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [
+      "50% co-pay for cyberknife treatment/Robotic Surgery/Bio-absorbable Stent/FAMETO Laser Surgery/Toric lens/KT Laser Prostate"
+    ],
+    "source_pages": [
+      3
+    ],
+    "evidence": "3. 50% co-pay For cyberknife treatment/Robotic Surgery/Bio-absorbabLe Stent/FAMETO Laser Suregry/Toric lens/KT Laser Prostate.",
+    "confidence": 0.98
+  },
+  {
+    "qms_field": "BEN_BARIATRIC",
+    "label": "Bariatric Surgery",
+    "status": "not_mentioned",
+    "limit_amount": null,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": 0.5
+  },
+  {
+    "qms_field": "BEN_PSYCHIATRIC",
+    "label": "Psychiatric / Mental Health Treatment",
+    "status": "covered",
+    "limit_amount": null,
+    "limit_text": "Covered",
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [
+      "Psychiatric Ailments / Functional Endoscopic Sinus Surgery / Mental illness covered"
+    ],
+    "source_pages": [
+      3
+    ],
+    "evidence": "Psychiatric Ailments / Functional Endoscopic Sinus Surgery / Mental illness covered",
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "BEN_AYUSH",
+    "label": "AYUSH Treatment",
+    "status": "not_mentioned",
+    "limit_amount": null,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": 0.5
+  },
+  {
+    "qms_field": "BEN_LGBTQ",
+    "label": "LGBTQ+ Cover",
+    "status": "not_mentioned",
+    "limit_amount": null,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": 0.5
+  },
+  {
+    "qms_field": "BEN_LIVEIN",
+    "label": "Live-In Partner Cover",
+    "status": "not_mentioned",
+    "limit_amount": null,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": 0.5
+  },
+  {
+    "qms_field": "BEN_ORGAN_DONOR",
+    "label": "Organ Donor Expenses",
+    "status": "not_mentioned",
+    "limit_amount": null,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": 0.5
+  },
+  {
+    "qms_field": "INF_TREATMENT",
+    "label": "Infertility Treatment",
+    "status": "not_mentioned",
+    "limit_amount": null,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": 0.5
+  },
+  {
+    "qms_field": "INF_SURROGACY",
+    "label": "Surrogacy",
+    "status": "not_mentioned",
+    "limit_amount": null,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": 0.5
+  },
+  {
+    "qms_field": "AMB_ROAD",
+    "label": "Ambulance Charges (Road)",
+    "status": "limited",
+    "limit_amount": 1000,
+    "limit_text": "INR 1000 per hospitalization",
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [
+      3
+    ],
+    "evidence": "Emergency Ambulance | INR 1000 per hospitalization",
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "AMB_AIR",
+    "label": "Air Ambulance",
+    "status": "not_mentioned",
+    "limit_amount": null,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": 0.5
+  },
+  {
+    "qms_field": "BUF_AMOUNT",
+    "label": "Corporate Buffer Limit",
+    "status": "not_covered",
+    "limit_amount": null,
+    "limit_text": "Not Covered",
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [
+      "Corporate Floater explicitly Not Covered in policy schedule"
+    ],
+    "source_pages": [
+      3
+    ],
+    "evidence": "Corporate Floater\nNot Covered",
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "BUF_ELIGIBILITY",
+    "label": "Corporate Buffer - Who Can Use",
+    "status": "not_mentioned",
+    "limit_amount": null,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": null
+  },
+  {
+    "qms_field": "BUF_DISEASE_CAPPING",
+    "label": "Disease-Wise Capping",
+    "status": "covered",
+    "limit_amount": null,
+    "limit_text": [
+      {
+        "disease": "Haemorrhoidectomy including Cost of stapler",
+        "limit_amount": 40000,
+        "limit_text": "40000",
+        "conditions": [],
+        "page": null,
+        "evidence": null
+      },
+      {
+        "disease": "Haemorrhoidectomy and Fissurectomy in a single sitting",
+        "limit_amount": 35000,
+        "limit_text": "35000",
+        "conditions": [],
+        "page": null,
+        "evidence": null
+      },
+      {
+        "disease": "Cholecystectomy",
+        "limit_amount": 35000,
+        "limit_text": "35000",
+        "conditions": [],
+        "page": null,
+        "evidence": null
+      },
+      {
+        "disease": "Hernioplasty/Herniorraphy- Unilateral including cost of mesh and tacker",
+        "limit_amount": 45000,
+        "limit_text": "45000",
+        "conditions": [],
+        "page": null,
+        "evidence": null
+      },
+      {
+        "disease": "Hernioplasty/Herniorraphy- Bilateral including Cost of mesh and tacker",
+        "limit_amount": 50000,
+        "limit_text": "50000",
+        "conditions": [],
+        "page": null,
+        "evidence": null
+      },
+      {
+        "disease": "URS (therapeutic) Including cost of laser treatment",
+        "limit_amount": 35000,
+        "limit_text": "35000",
+        "conditions": [],
+        "page": null,
+        "evidence": null
+      },
+      {
+        "disease": "PCNL- Unilateral",
+        "limit_amount": 50000,
+        "limit_text": "50000",
+        "conditions": [],
+        "page": null,
+        "evidence": null
+      },
+      {
+        "disease": "PCNL- Bilateral",
+        "limit_amount": 60000,
+        "limit_text": "60000",
+        "conditions": [],
+        "page": null,
+        "evidence": null
+      },
+      {
+        "disease": "Hydrocele",
+        "limit_amount": 25000,
+        "limit_text": "25000",
+        "conditions": [],
+        "page": null,
+        "evidence": null
+      },
+      {
+        "disease": "Appendicectomy",
+        "limit_amount": 45000,
+        "limit_text": "45000",
+        "conditions": [],
+        "page": null,
+        "evidence": null
+      },
+      {
+        "disease": "Cataract per eye including Cost of Lens",
+        "limit_amount": 25000,
+        "limit_text": "25000",
+        "conditions": [],
+        "page": null,
+        "evidence": null
+      },
+      {
+        "disease": "Hysterectomy (Abdominal/Vaginal)",
+        "limit_amount": 55000,
+        "limit_text": "55000",
+        "conditions": [],
+        "page": null,
+        "evidence": null
+      },
+      {
+        "disease": "Total Knee Replacement(Unilateral) including cost of implants",
+        "limit_amount": 100000,
+        "limit_text": "100000",
+        "conditions": [],
+        "page": null,
+        "evidence": null
+      },
+      {
+        "disease": "Total Knee Replacement (Bilateral) including cost of implants",
+        "limit_amount": 150000,
+        "limit_text": "150000",
+        "conditions": [],
+        "page": null,
+        "evidence": null
+      },
+      {
+        "disease": "Hip Replacement (Unilateral) including cost of implants",
+        "limit_amount": 100000,
+        "limit_text": "100000",
+        "conditions": [],
+        "page": null,
+        "evidence": null
+      },
+      {
+        "disease": "Hip Replacement (Bilateral) including cost of implants",
+        "limit_amount": 150000,
+        "limit_text": "150000",
+        "conditions": [],
+        "page": null,
+        "evidence": null
+      }
+    ],
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [
+      3
+    ],
+    "evidence": "Disease wise capping | Haemorrhoidectomy including Cost of stapler- 40000, Haemorrhoidectomy and Fissurectomy in a single sitting-35000, Cholecystectomy- 35000, Hernioplasty/Herniorraphy- Unilateral including cost of mesh and tacker- 45000, Hernioplasty/Herniorraphy- Bilateral including Cost of mesh and tacker-50000, URS (therapeutic) Including cost of laser treatment-35000, PCNL- Unilateral-50000, PCNL- Bilateral-60000, Hydrocele-25000,Appendicectomy-45000, Cataract per eye including Cost of Lens-25000, Hysterectomy (Abdominal/Vaginal)-55000, Total Knee Replacement(Unilateral) including cost of implants-100000, Total Knee Replacement (Bilateral) including cost of implants-150000, Hip Replacement (Unilateral) including cost of implants-100000, Hip Replacement (Bilateral) including cost of implants-150000",
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "COPAY_SUBLIMITS",
+    "label": "Co-Pay & Procedure Sub-Limits",
+    "status": "covered",
+    "limit_amount": null,
+    "limit_text": [
+      {
+        "item": "cyberknife treatment/Robotic Surgery/Bio-absorbabLe Stent/FAMETO Laser Suregry/Toric lens/KT Laser Prostate",
+        "type": "copay",
+        "limit_amount": null,
+        "amount": null,
+        "limit_percent": null,
+        "percent": 50.0,
+        "limit_text": null,
+        "applies_to": "3. 50% co-pay For cyberknife treatment/Robotic Surgery/Bio-absorbabLe Stent/FAMETO Laser Suregry/Toric lens/KT Laser Prostate.",
+        "exceptions": null,
+        "conditions": [],
+        "page": 3,
+        "evidence": "3. 50% co-pay For cyberknife treatment/Robotic Surgery/Bio-absorbabLe Stent/FAMETO Laser Suregry/Toric lens/KT Laser Prostate."
+      },
+      {
+        "item": "cyberknife treatment/Robotic Surgery/Bio-absorbabLe Stent/FAMETO Laser Suregry/Toric lens/KT Laser Prostate",
+        "type": "copay",
+        "limit_amount": null,
+        "amount": null,
+        "limit_percent": null,
+        "percent": 50.0,
+        "limit_text": null,
+        "applies_to": "|  | Special Conditions: 1. New born baby would be covered from the date of delivery provided we receive the endorsement within 90 days of delivery. 2. Claim for lasik treatment - if power of eye is a",
+        "exceptions": null,
+        "conditions": [],
+        "page": 3,
+        "evidence": "|  | Special Conditions: 1. New born baby would be covered from the date of delivery provided we receive the endorsement within 90 days of delivery. 2. Claim for lasik treatment - if power of eye is above +/- 7.5, is payable 3. 50% co-pay For cyberknife treatment/Robotic Surgery/Bio-absorbabLe Stent"
+      }
+    ],
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [
+      "cyberknife treatment/Robotic Surgery/Bio-absorbabLe Stent/FAMETO Laser Suregry/Toric lens/KT Laser Prostate: 50.0% co-pay",
+      "cyberknife treatment/Robotic Surgery/Bio-absorbabLe Stent/FAMETO Laser Suregry/Toric lens/KT Laser Prostate: 50.0% co-pay"
+    ],
+    "source_pages": [
+      3
+    ],
+    "evidence": "3. 50% co-pay For cyberknife treatment/Robotic Surgery/Bio-absorbabLe Stent/FAMETO Laser Suregry/Toric lens/KT Laser Prostate.; |  | Special Conditions: 1. New born baby would be covered from the date of delivery provided we receive the endorsement within 90 days of delivery. 2. Claim for lasik trea",
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "BUF_WAIVER_CONDITIONS",
+    "label": "Applicable Waiver Conditions",
+    "status": "covered",
+    "limit_amount": null,
+    "limit_text": [
+      "Pre-Existing Disease (PED) | Waived Off",
+      "|  | Pre-Existing Disease (PED) | Waived Off |  |  |  |",
+      "|  | 2 yr exclusions (Disease Specific Exclusions) | Waived Off |  |  |  |",
+      "|  | Initial Waiting Period | Waived Off |  |  |  |",
+      "| Pre-Existing Disease (PED) | Waived Off |",
+      "| 2 yr exclusions (Disease Specific Exclusions) | Waived Off |",
+      "| Initial Waiting Period | Waived Off |"
+    ],
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [
+      {
+        "waiver_name": "Pre-Existing Diseases (PED) Waiting Period",
+        "clause": "Pre-Existing Disease (PED) | Waived Off",
+        "page": 3,
+        "evidence": "Pre-Existing Disease (PED) | Waived Off"
+      },
+      {
+        "waiver_name": "Policy Clause Waiver",
+        "clause": "|  | Pre-Existing Disease (PED) | Waived Off |  |  |  |",
+        "page": 3,
+        "evidence": "|  | Pre-Existing Disease (PED) | Waived Off |  |  |  |"
+      },
+      {
+        "waiver_name": "Policy Clause Waiver",
+        "clause": "|  | 2 yr exclusions (Disease Specific Exclusions) | Waived Off |  |  |  |",
+        "page": 3,
+        "evidence": "|  | 2 yr exclusions (Disease Specific Exclusions) | Waived Off |  |  |  |"
+      },
+      {
+        "waiver_name": "Policy Clause Waiver",
+        "clause": "|  | Initial Waiting Period | Waived Off |  |  |  |",
+        "page": 3,
+        "evidence": "|  | Initial Waiting Period | Waived Off |  |  |  |"
+      },
+      {
+        "waiver_name": "Policy Clause Waiver",
+        "clause": "| Pre-Existing Disease (PED) | Waived Off |",
+        "page": 3,
+        "evidence": "| Pre-Existing Disease (PED) | Waived Off |"
+      },
+      {
+        "waiver_name": "Policy Clause Waiver",
+        "clause": "| 2 yr exclusions (Disease Specific Exclusions) | Waived Off |",
+        "page": 3,
+        "evidence": "| 2 yr exclusions (Disease Specific Exclusions) | Waived Off |"
+      },
+      {
+        "waiver_name": "Policy Clause Waiver",
+        "clause": "| Initial Waiting Period | Waived Off |",
+        "page": 3,
+        "evidence": "| Initial Waiting Period | Waived Off |"
+      }
+    ],
+    "source_pages": [
+      3
+    ],
+    "evidence": "Pre-Existing Disease (PED) | Waived Off; |  | Pre-Existing Disease (PED) | Waived Off |  |  |  |; |  | 2 yr exclusions (Disease Specific Exclusions) | Waived Off |  |  |  |; |  | Initial Waiting Period | Waived Off |  |  |  |; | Pre-Existing Disease (PED) | Waived Off |; | 2 yr exclusions (Disease S",
+    "confidence": 1.0
+  }
+]

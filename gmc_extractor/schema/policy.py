@@ -18,6 +18,7 @@ class Identity(BaseModel):
     insurer_name: Optional[str] = Field(default=None, description="Name of the insurance company.")
     tpa_name: Optional[str] = Field(default=None, description="Name of the Third Party Administrator (TPA).")
     source_pages: list[int] = Field(default_factory=list)
+    evidence: Optional[str] = Field(default=None, description="Short verbatim evidence quote from document.")
     confidence: float = Field(default=0.0, ge=0.0, le=1.0)
 
 
@@ -67,7 +68,12 @@ class PolicyDetails(BaseModel):
         default_factory=list,
         description="All sum-insured tiers (ascending order).",
     )
+    total_sum_insured: Optional[int] = Field(
+        default=None,
+        description="Aggregate/total policy Sum Insured if explicitly stated.",
+    )
     source_pages: list[int] = Field(default_factory=list)
+    evidence: Optional[str] = Field(default=None, description="Short verbatim evidence quote from document.")
     confidence: float = Field(default=0.0, ge=0.0, le=1.0)
     conditions: list[str] = Field(default_factory=list)
 
@@ -77,6 +83,9 @@ class PolicyDetails(BaseModel):
 class Demographics(BaseModel):
     """Census / member count data."""
     num_employees: Optional[int] = Field(default=None)
+    num_dependents: Optional[int] = Field(
+        default=None, description="Total dependents when stated as an aggregate count."
+    )
     num_spouses: Optional[int] = Field(default=None)
     num_children: Optional[int] = Field(default=None)
     num_parents: Optional[int] = Field(default=None, description="Parents + parents-in-law combined.")
@@ -84,22 +93,27 @@ class Demographics(BaseModel):
         default=None, description="Total lives as explicitly stated in the document."
     )
     total_lives_computed: Optional[int] = Field(
-        default=None, description="Sum of employees + spouses + children + parents."
+        default=None, description="Sum of employees + dependents or members."
     )
     count_mismatch: bool = Field(
         default=False,
         description="True if stated total does not match computed total.",
     )
     source_pages: list[int] = Field(default_factory=list)
+    evidence: Optional[str] = Field(default=None, description="Short verbatim evidence quote from document.")
     confidence: float = Field(default=0.0, ge=0.0, le=1.0)
     conditions: list[str] = Field(default_factory=list)
 
     @model_validator(mode="after")
     def _compute_total(self) -> "Demographics":
         """Auto-compute total_lives and flag mismatch."""
-        parts = [self.num_employees, self.num_spouses, self.num_children, self.num_parents]
-        if all(v is not None for v in parts):
-            self.total_lives_computed = sum(v for v in parts if v)  # type: ignore[arg-type]
+        if self.total_lives_computed is None:
+            if self.num_employees is not None and self.num_dependents is not None:
+                self.total_lives_computed = self.num_employees + self.num_dependents
+            else:
+                parts = [self.num_employees, self.num_spouses, self.num_children, self.num_parents]
+                if any(v is not None for v in parts):
+                    self.total_lives_computed = sum(v for v in parts if v is not None)
         if (
             self.total_lives_stated is not None
             and self.total_lives_computed is not None

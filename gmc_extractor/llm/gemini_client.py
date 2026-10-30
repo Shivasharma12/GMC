@@ -45,6 +45,13 @@ class GeminiClient(LLMClient):
     def _build_client(self):
         """Initialise the google-genai client."""
         try:
+            import os
+            # Fix httpx bug where unbracketed IPv6 entries like '::1' in NO_PROXY cause InvalidURL: Invalid port: ':1'
+            for _var in ("NO_PROXY", "no_proxy"):
+                _val = os.environ.get(_var)
+                if _val:
+                    os.environ[_var] = ",".join([e.strip() for e in _val.split(",") if ":" not in e and e.strip()])
+
             from google import genai
             client = genai.Client(api_key=self._api_key)
             return client

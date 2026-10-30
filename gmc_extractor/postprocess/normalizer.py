@@ -42,6 +42,11 @@ _DATE_DMY_ALPHA = re.compile(
     r"(\d{1,2})(?:st|nd|rd|th)?[\s\-]+([A-Za-z]+)[\s,\-]+(\d{2,4})",
     re.I,
 )
+# Month DD, YYYY or Mon DD, YYYY (e.g. April 26, 2024)
+_DATE_MDY_ALPHA = re.compile(
+    r"([A-Za-z]+)\s+(\d{1,2})(?:st|nd|rd|th)?,\s*(\d{2,4})",
+    re.I,
+)
 # YYYY-MM-DD (already ISO)
 _DATE_ISO = re.compile(r"(\d{4})-(\d{2})-(\d{2})")
 
@@ -155,6 +160,18 @@ def parse_date(text: str) -> Optional[str]:
             year += 2000
         month = _MONTHS.get(month_str)
         if month:
+            return f"{year:04d}-{month:02d}-{day:02d}"
+
+    # Month DD, YYYY (e.g. April 26, 2024)
+    m = _DATE_MDY_ALPHA.search(text)
+    if m:
+        month_str = m.group(1).lower()[:3]
+        day = int(m.group(2))
+        year = int(m.group(3))
+        if year < 100:
+            year += 2000
+        month = _MONTHS.get(month_str)
+        if month and 1 <= day <= 31:
             return f"{year:04d}-{month:02d}-{day:02d}"
 
     # DD/MM/YYYY or DD-MM-YYYY

@@ -23,6 +23,9 @@ class DocumentInfo(BaseModel):
     run_timestamp: str = Field(
         default_factory=lambda: datetime.now().isoformat(timespec="seconds")
     )
+    failed_groups: list[str] = Field(default_factory=list)
+
+    model_config = {"extra": "allow"}
 
 
 class ExtractionResult(BaseModel):

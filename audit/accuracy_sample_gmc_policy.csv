@@ -1,0 +1,59 @@
+qms_field,label,extracted_value,extracted_status,source_pages_claimed,evidence_quote_claimed,evidence_found_on_claimed_page,value_matches_evidence,notes
+IDENT_INSURER,Insurer Name,,not_mentioned,,,N/A (no evidence quote),yes,Correctly identified as not mentioned
+IDENT_TPA,TPA Name,,not_mentioned,,,N/A (no evidence quote),yes,Correctly identified as not mentioned
+POL_NUMBER,Policy Number,,not_mentioned,,,N/A (no evidence quote),unclear,"Possible mention on pages {1, 5, 6, 7, 8}"
+POL_PREV_INCEPTION,Previous Year Inception Date,,not_mentioned,,,N/A (no evidence quote),unclear,"Possible mention on pages {1, 2, 5}"
+POL_START_DATE,Policy Start Date,,not_mentioned,,,N/A (no evidence quote),unclear,"Possible mention on pages {1, 5, 6, 7, 8}"
+POL_END_DATE,Policy End Date,,not_mentioned,,,N/A (no evidence quote),unclear,"Possible mention on pages {1, 5, 6, 7, 8}"
+POL_TENURE_MONTHS,Policy Tenure (months),,not_mentioned,,,N/A (no evidence quote),unclear,"Possible mention on pages {1, 5, 6, 7, 8}"
+POL_PREMIUM_EXCL_GST,Premium (excluding GST),,not_mentioned,,,N/A (no evidence quote),yes,Correctly identified as not mentioned
+POL_PREMIUM_INCL_GST,Premium (including GST),,not_mentioned,,,N/A (no evidence quote),yes,Correctly identified as not mentioned
+FAM_EMPLOYEE,Family - Employee Covered,False,not_covered,,,N/A (no evidence quote),yes,Requires manual verification
+FAM_SPOUSE,Family - Spouse Covered,False,not_covered,,,N/A (no evidence quote),yes,Requires manual verification
+FAM_CHILDREN,Family - Children Covered,False,not_covered,,,N/A (no evidence quote),yes,Requires manual verification
+FAM_PARENTS,Family - Parents Covered,False,not_covered,,,N/A (no evidence quote),yes,Requires manual verification
+FAM_PARENTS_IN_LAW,Family - Parents-in-Law Covered,False,not_covered,,,N/A (no evidence quote),yes,Requires manual verification
+DEM_EMPLOYEES,Number of Employees,,not_mentioned,,,N/A (no evidence quote),unclear,"Possible mention on pages {8, 1, 2, 4}"
+DEM_SPOUSES,Number of Spouses,,not_mentioned,,,N/A (no evidence quote),unclear,"Possible mention on pages {1, 2, 4}"
+DEM_CHILDREN,Number of Children,,not_mentioned,,,N/A (no evidence quote),unclear,"Possible mention on pages {1, 2, 4}"
+DEM_PARENTS,Number of Parents / Parents-in-Law,,not_mentioned,,,N/A (no evidence quote),unclear,"Possible mention on pages {1, 2}"
+DEM_TOTAL_STATED,Total Lives (as stated in policy),,not_mentioned,,,N/A (no evidence quote),unclear,"Possible mention on pages {1, 2}"
+DEM_TOTAL_COMPUTED,Total Lives (computed),,not_mentioned,,,N/A (no evidence quote),unclear,"Possible mention on pages {1, 2}"
+ROOM_RENT,Room Rent Limit,,not_mentioned,,,N/A (no evidence quote),unclear,"Possible mention on pages {1, 3, 4, 6, 8}"
+ROOM_RENT_PCT,Room Rent (% of SI),,not_mentioned,,,N/A (no evidence quote),yes,Correctly identified as not mentioned
+ROOM_ICU,ICU Charges Limit,,not_mentioned,,,N/A (no evidence quote),unclear,"Possible mention on pages {1, 3, 4, 6, 7, 8}"
+ROOM_ICU_PCT,ICU Charges (% of SI),,not_mentioned,,,N/A (no evidence quote),yes,Correctly identified as not mentioned
+ROOM_PRE_HOSP_DAYS,Pre-Hospitalisation Days,,not_mentioned,,,N/A (no evidence quote),yes,Correctly identified as not mentioned
+ROOM_POST_HOSP_DAYS,Post-Hospitalisation Days,,not_mentioned,,,N/A (no evidence quote),yes,Correctly identified as not mentioned
+MAT_9M_WAIT,Maternity 9-Month Waiting Period,,not_mentioned,,,N/A (no evidence quote),unclear,"Possible mention on pages {8, 4, 5}"
+MAT_BABY_DAY1,Baby Day One Cover,,not_mentioned,,,N/A (no evidence quote),unclear,"Possible mention on pages {1, 2, 3, 4, 5, 6, 7}"
+MAT_VACCINATION,Baby Vaccination Cover,,not_mentioned,,,N/A (no evidence quote),unclear,"Possible mention on pages {1, 2, 3, 4, 5, 6, 7}"
+MAT_NORMAL_METRO,Maternity - Normal Delivery (Metro),,not_mentioned,,,N/A (no evidence quote),unclear,"Possible mention on pages {8, 4}"
+MAT_NORMAL_NON_METRO,Maternity - Normal Delivery (Non-Metro),,not_mentioned,,,N/A (no evidence quote),unclear,"Possible mention on pages {8, 4}"
+MAT_CSEC_METRO,Maternity - C-Section (Metro),,not_mentioned,,,N/A (no evidence quote),unclear,"Possible mention on pages {8, 4}"
+MAT_CSEC_NON_METRO,Maternity - C-Section (Non-Metro),,not_mentioned,,,N/A (no evidence quote),unclear,"Possible mention on pages {8, 4}"
+WAIT_30DAY,30-Day Initial Waiting Period,,not_mentioned,,,N/A (no evidence quote),unclear,"Possible mention on pages {8, 4, 5}"
+WAIT_1YEAR,1st Year Specific Disease Waiting Period,,not_mentioned,,,N/A (no evidence quote),unclear,"Possible mention on pages {8, 4, 5}"
+WAIT_2YEAR,2nd Year Specific Disease Waiting Period,,not_mentioned,,,N/A (no evidence quote),unclear,"Possible mention on pages {8, 4, 5}"
+WAIT_PED,Pre-Existing Disease (PED) Waiting Period,,not_mentioned,,,N/A (no evidence quote),unclear,"Possible mention on pages {8, 4, 5}"
+BEN_DAYCARE,Day Care Procedures,,not_mentioned,,,N/A (no evidence quote),yes,Correctly identified as not mentioned
+BEN_OPD,OPD Benefit,,not_mentioned,,,N/A (no evidence quote),unclear,"Possible mention on pages {4, 6, 7}"
+BEN_TELECONSULT,Teleconsultation,,not_mentioned,,,N/A (no evidence quote),yes,Correctly identified as not mentioned
+BEN_PHARMACY,Pharmacy Discount,,not_mentioned,,,N/A (no evidence quote),yes,Correctly identified as not mentioned
+BEN_DOMICILIARY,Domiciliary Hospitalisation,,not_mentioned,,,N/A (no evidence quote),yes,Correctly identified as not mentioned
+BEN_HEALTH_CHECK,Annual Health Check-Up,,not_mentioned,,,N/A (no evidence quote),unclear,"Possible mention on pages {1, 6, 7}"
+BEN_MODERN_TREAT,Modern / Advanced Treatment,,not_mentioned,,,N/A (no evidence quote),unclear,"Possible mention on pages {5, 6, 7}"
+BEN_BARIATRIC,Bariatric Surgery,,not_mentioned,,,N/A (no evidence quote),unclear,"Possible mention on pages {8, 6, 7}"
+BEN_PSYCHIATRIC,Psychiatric / Mental Health Treatment,,not_mentioned,,,N/A (no evidence quote),unclear,"Possible mention on pages {1, 5, 6, 7}"
+BEN_AYUSH,AYUSH Treatment,,not_mentioned,,,N/A (no evidence quote),unclear,"Possible mention on pages {5, 6, 7}"
+BEN_LGBTQ,LGBTQ+ Cover,,not_mentioned,,,N/A (no evidence quote),unclear,"Possible mention on pages {1, 2, 3, 4, 5, 6, 7}"
+BEN_LIVEIN,Live-In Partner Cover,,not_mentioned,,,N/A (no evidence quote),unclear,"Possible mention on pages {1, 2, 3, 4, 5, 6, 7}"
+BEN_ORGAN_DONOR,Organ Donor Expenses,,not_mentioned,,,N/A (no evidence quote),unclear,"Possible mention on pages {3, 6, 7}"
+INF_TREATMENT,Infertility Treatment,,not_mentioned,,,N/A (no evidence quote),unclear,"Possible mention on pages {5, 6, 7}"
+INF_SURROGACY,Surrogacy,,not_mentioned,,,N/A (no evidence quote),yes,Correctly identified as not mentioned
+AMB_ROAD,Ambulance Charges (Road),,not_mentioned,,,N/A (no evidence quote),unclear,"Possible mention on pages {3, 7}"
+AMB_AIR,Air Ambulance,,not_mentioned,,,N/A (no evidence quote),yes,Correctly identified as not mentioned
+BUF_AMOUNT,Corporate Buffer Limit,,not_mentioned,,,N/A (no evidence quote),unclear,"Possible mention on pages {1, 3, 4, 6, 8}"
+BUF_ELIGIBILITY,Corporate Buffer - Who Can Use,,not_mentioned,,,N/A (no evidence quote),yes,Correctly identified as not mentioned
+BUF_DISEASE_CAPPING,Disease-Wise Capping,[],not_mentioned,,,N/A (no evidence quote),yes,Requires manual verification
+BUF_WAIVER_CONDITIONS,Applicable Waiver Conditions,[],not_mentioned,,,N/A (no evidence quote),yes,Requires manual verification

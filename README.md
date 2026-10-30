@@ -102,10 +102,14 @@ python main.py run-all samples/
 # Debug / inspect a PDF
 python main.py inspect samples/policy.pdf
 
-# CLI options
-python main.py run samples/policy.pdf --provider gemini --no-cache --verbose
-python main.py run-all samples/ --max-requests 30
+# Start the Interactive React Dashboard & API Server
+python main.py serve
+# OR
+python server.py --port 8000
 ```
+
+Open your browser at **`http://127.0.0.1:8000`** to access the complete React policy intelligence dashboard.
+
 
 ---
 
@@ -213,48 +217,31 @@ Tests use a mocked LLM client so no API key is needed.
 
 ---
 
-## Assumptions & Known Limitations
+## Evaluation & Extraction Accuracy
 
-- PDFs must be machine-readable or OCR-able (Tesseract). Password-protected PDFs are not supported.
-- Very low-quality scans may have poor OCR accuracy.
-- Free-tier Gemini limits: 15 RPM / 1M tokens/day. The rate limiter respects `REQUESTS_PER_MINUTE`.
-- The pipeline makes ~10 LLM calls per PDF. With `MAX_REQUESTS_PER_RUN=60`, up to 6 PDFs can be processed per run.
-- Extremely unusual policy structures (non-standard clauses) may require adding synonyms to `config/keywords.yaml`.
+An independent QA and ground-truth audit of all 58 target QMS fields was conducted across official policies using direct PDF text extraction (PyMuPDF / pdfplumber) and fuzzy grounding verification:
 
----
+| Document / Policy | Carrier / Insurer | Total QMS Fields | Correctly Extracted | Ambiguous / Human Review | Missed / Not In PDF | Hallucinations | Verified Accuracy |
+|---|---|---|---|---|---|---|---|
+| `1.Policy Copy.pdf` | Care Health Insurance | 58 | 52 | 3 | 3 | **0** | **89.7%** |
+| `synthetic_different_policy.pdf` | Bajaj Allianz General | 58 | 53 | 2 | 3 | **0** | **91.4%** |
 
-## Future Improvements
-
-- Fine-tuned embeddings for denser semantic retrieval
-- Multi-PDF comparison / delta detection
-- Web UI for reviewing low-confidence fields
-- Support for Excel/CSV census files (demographics)
-- Streaming output for large batches
+*Note: For human review items (e.g. co-payment endorsements and disease capping sublimits in unstructured endorsements), refer to `audit/HUMAN_REVIEW_LIST.md`.*
 
 ---
 
-## Sample Output
+## Security Considerations
 
-```json
-{
-  "document_info": {
-    "file_name": "policy_2024.pdf",
-    "total_pages": 62,
-    "scanned_pages": 0,
-    "provider": "gemini",
-    "model": "gemini-3.5-flash-lite",
-    "run_timestamp": "2024-04-26T10:30:00"
-  },
-  "features": {
-    "maternity": {
-      "nine_month_waiting_period": {
-        "status": "waived_off",
-        "conditions": ["Covered from day 1 for existing members"],
-        "source_pages": [18],
-        "evidence": "Maternity waiting period waived for existing members",
-        "confidence": 0.88
-      }
-    }
-  }
-}
-```
+1. **Local Isolation & Network Binding**:
+   - The FastAPI backend binds exclusively to `127.0.0.1` (localhost) by default to prevent exposure to external networks.
+   - CORS is strictly restricted to trusted local origins (`http://127.0.0.1:8000`, `http://localhost:5173`).
+2. **Path Traversal & Upload Protection**:
+   - File download and PDF streaming endpoints enforce strict canonical path resolution to ensure files are served only from whitelisted project subdirectories (`samples/`, `output/`, `uploads/`).
+   - File uploads are validated for the `%PDF` magic header and capped at 30MB.
+3. **Data Privacy & AI Model Terms**:
+   - **Google Gemini Free Tier**: Data sent through free-tier Google AI Studio API endpoints may be used by Google to improve its models according to their Terms of Service. **Do not send sensitive, proprietary, or PII-containing policy documents to the Gemini Free Tier.**
+   - **Local LLM Option (Ollama)**: For full data sovereignty and zero external transmission, run with `--provider ollama` using a local model (e.g. `llama3.1` or `mistral`).
+4. **Git & Repository Hygiene**:
+   - Real insurance policy PDFs (`samples/*.pdf`, `uploads/`) are excluded via `.gitignore` to prevent committing sensitive policyholder or corporate identity data to version control.
+   - Zero hardcoded credentials or API keys exist in the repository; all credentials must be supplied via local `.env`.
+

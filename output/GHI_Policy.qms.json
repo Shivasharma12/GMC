@@ -1,0 +1,1061 @@
+[
+  {
+    "qms_field": "IDENT_INSURER",
+    "label": "Insurer Name",
+    "status": "covered",
+    "limit_amount": null,
+    "limit_text": "Global Health Insurance Company Limited",
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [
+      1
+    ],
+    "evidence": "Registered Office: 7th Floor, Health Tower, Sector 18, Gurugram, Haryana - 122001",
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "IDENT_TPA",
+    "label": "TPA Name",
+    "status": "covered",
+    "limit_amount": null,
+    "limit_text": "Paramount Health Services & Insurance TPA Pvt. Ltd.",
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [
+      1
+    ],
+    "evidence": "Third Party Administrator (TPA) : Paramount Health Services & Insurance TPA Pvt. Ltd",
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "POL_NUMBER",
+    "label": "Policy Number",
+    "status": "covered",
+    "limit_amount": null,
+    "limit_text": "GHI/GMC/2024/00542",
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [
+      5
+    ],
+    "evidence": "Previous policy inception date: 01-Apr-2024 (same as current start date for base year",
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "POL_PREV_INCEPTION",
+    "label": "Previous Year Inception Date",
+    "status": "covered",
+    "limit_amount": null,
+    "limit_text": "2024-04-01",
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [
+      "Treated uploaded document start date as previous inception date per expiring policy baseline rule"
+    ],
+    "source_pages": [
+      5
+    ],
+    "evidence": "Previous policy inception date: 01-Apr-2024 (same as current start date for base year",
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "POL_START_DATE",
+    "label": "Policy Start Date",
+    "status": "covered",
+    "limit_amount": null,
+    "limit_text": "2024-04-01",
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [
+      5
+    ],
+    "evidence": "Previous policy inception date: 01-Apr-2024 (same as current start date for base year",
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "POL_END_DATE",
+    "label": "Policy End Date",
+    "status": "covered",
+    "limit_amount": null,
+    "limit_text": "2025-03-31",
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [
+      1
+    ],
+    "evidence": "Policy End Date   : 31-Mar-2025  (23:59 hrs",
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "POL_TENURE_MONTHS",
+    "label": "Policy Tenure (months)",
+    "status": "covered",
+    "limit_amount": 12,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [
+      "Derived from policy start and end dates"
+    ],
+    "source_pages": [
+      1
+    ],
+    "evidence": "Registered Office: 7th Floor, Health Tower, Sector 18, Gurugram, Haryana - 122001",
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "POL_PREMIUM_EXCL_GST",
+    "label": "Premium (excluding GST)",
+    "status": "covered",
+    "limit_amount": 396000,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [
+      1
+    ],
+    "evidence": "Net Premium (excl. GST)              : Rs. 3,96,000",
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "POL_PREMIUM_INCL_GST",
+    "label": "Premium (including GST)",
+    "status": "covered",
+    "limit_amount": 467280,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [
+      1
+    ],
+    "evidence": "Total Premium (incl. GST)            : Rs. 4,67,280",
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "POL_SI_TIERS",
+    "label": "Sum Insured Tiers",
+    "status": "covered",
+    "limit_amount": null,
+    "limit_text": [
+      200000
+    ],
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [
+      2
+    ],
+    "evidence": "Newborn baby is covered from the first day of birth under the mother's Sum Insured",
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "POL_TOTAL_SUM_INSURED",
+    "label": "Total Sum Insured (Aggregate)",
+    "status": "not_mentioned",
+    "limit_amount": null,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": null
+  },
+  {
+    "qms_field": "FAM_EMPLOYEE",
+    "label": "Family - Employee Covered",
+    "status": "covered",
+    "limit_amount": null,
+    "limit_text": "True",
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [
+      3
+    ],
+    "evidence": "The standard 30-day initial waiting period is waived off for all insured members",
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "FAM_SPOUSE",
+    "label": "Family - Spouse Covered",
+    "status": "covered",
+    "limit_amount": null,
+    "limit_text": "True",
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [
+      3
+    ],
+    "evidence": "The standard 30-day initial waiting period is waived off for all insured members",
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "FAM_CHILDREN",
+    "label": "Family - Children Covered",
+    "status": "covered",
+    "limit_amount": null,
+    "limit_text": "True",
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [
+      3
+    ],
+    "evidence": "The standard 30-day initial waiting period is waived off for all insured members",
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "FAM_PARENTS",
+    "label": "Family - Parents Covered",
+    "status": "not_covered",
+    "limit_amount": null,
+    "limit_text": "False",
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [
+      "Derived: not covered per family definition in policy"
+    ],
+    "source_pages": [
+      3
+    ],
+    "evidence": "The standard 30-day initial waiting period is waived off for all insured members",
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "FAM_PARENTS_IN_LAW",
+    "label": "Family - Parents-in-Law Covered",
+    "status": "not_covered",
+    "limit_amount": null,
+    "limit_text": "False",
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [
+      "Derived: not covered per family definition in policy"
+    ],
+    "source_pages": [
+      3
+    ],
+    "evidence": "The standard 30-day initial waiting period is waived off for all insured members",
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "DEM_EMPLOYEES",
+    "label": "Number of Employees",
+    "status": "covered",
+    "limit_amount": 50,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [
+      3
+    ],
+    "evidence": "50% co-pay for Cochlear Implant and other hearing devices implanted during surgery",
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "DEM_DEPENDENTS",
+    "label": "Number of Dependents",
+    "status": "covered",
+    "limit_amount": 66,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [
+      4
+    ],
+    "evidence": "Dependents are NOT eligible for this corporate buffer",
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "DEM_SPOUSES",
+    "label": "Number of Spouses",
+    "status": "not_mentioned",
+    "limit_amount": null,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [
+      "member-wise annexure not present in document"
+    ],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": null
+  },
+  {
+    "qms_field": "DEM_CHILDREN",
+    "label": "Number of Children",
+    "status": "not_mentioned",
+    "limit_amount": null,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [
+      "member-wise annexure not present in document"
+    ],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": null
+  },
+  {
+    "qms_field": "DEM_PARENTS",
+    "label": "Number of Parents / Parents-in-Law",
+    "status": "not_mentioned",
+    "limit_amount": null,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [
+      "member-wise annexure not present in document"
+    ],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": null
+  },
+  {
+    "qms_field": "DEM_TOTAL_STATED",
+    "label": "Total Lives (as stated in policy)",
+    "status": "covered",
+    "limit_amount": 116,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [
+      1
+    ],
+    "evidence": "Total Lives                          : 116",
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "DEM_TOTAL_COMPUTED",
+    "label": "Total Lives (computed)",
+    "status": "covered",
+    "limit_amount": 116,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [
+      "Computed from employee + dependent counts"
+    ],
+    "source_pages": [
+      2
+    ],
+    "evidence": "Newborn baby is covered from the first day of birth under the mother's Sum Insured",
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "ROOM_RENT",
+    "label": "Room Rent Limit",
+    "status": "limited",
+    "limit_amount": 2000,
+    "limit_text": "1% of Sum Insured per day (i.e., Rs. 2,000 per day)",
+    "limit_percent_of_si": 1.0,
+    "limit_days": null,
+    "conditions": [
+      "Single private air-conditioned room applicable"
+    ],
+    "source_pages": [
+      2
+    ],
+    "evidence": "Room rent is limited to 1% of Sum Insured per day (i.e., Rs. 2,000 per day).\nSingle private air-conditioned room applicable.",
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "ROOM_ICU",
+    "label": "ICU Charges Limit",
+    "status": "limited",
+    "limit_amount": 4000,
+    "limit_text": "2% of Sum Insured per day (i.e., Rs. 4,000 per day)",
+    "limit_percent_of_si": 2.0,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [
+      2
+    ],
+    "evidence": "ICU / ICCU charges are limited to 2% of Sum Insured per day (i.e., Rs. 4,000 per day).",
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "ROOM_PRE_HOSP_DAYS",
+    "label": "Pre-Hospitalisation Days",
+    "status": "covered",
+    "limit_amount": null,
+    "limit_text": "30 days",
+    "limit_percent_of_si": null,
+    "limit_days": 30,
+    "conditions": [],
+    "source_pages": [
+      2
+    ],
+    "evidence": "Pre-hospitalization expenses are covered for 30 days prior to date of admission.",
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "ROOM_POST_HOSP_DAYS",
+    "label": "Post-Hospitalisation Days",
+    "status": "covered",
+    "limit_amount": null,
+    "limit_text": "60 days",
+    "limit_percent_of_si": null,
+    "limit_days": 60,
+    "conditions": [],
+    "source_pages": [
+      2
+    ],
+    "evidence": "Post-hospitalization expenses are covered for 60 days from date of discharge.",
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "MAT_9M_WAIT",
+    "label": "Maternity 9-Month Waiting Period",
+    "status": "waived_off",
+    "limit_amount": null,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [
+      "The 9-month waiting period applicable to maternity benefits is hereby waived off from the date of inception of this policy."
+    ],
+    "source_pages": [
+      2
+    ],
+    "evidence": "The 9-month waiting period applicable to maternity benefits is hereby waived off from the date of inception of this policy.",
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "MAT_BABY_DAY1",
+    "label": "Baby Day One Cover",
+    "status": "covered",
+    "limit_amount": null,
+    "limit_text": "covered from the first day of birth under the mother's Sum Insured",
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [
+      "Covered under the mother's Sum Insured"
+    ],
+    "source_pages": [
+      2
+    ],
+    "evidence": "Newborn baby is covered from the first day of birth under the mother's Sum Insured.",
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "MAT_VACCINATION",
+    "label": "Baby Vaccination Cover",
+    "status": "not_mentioned",
+    "limit_amount": null,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": 0.5
+  },
+  {
+    "qms_field": "MAT_NORMAL_METRO",
+    "label": "Maternity - Normal Delivery (Metro)",
+    "status": "limited",
+    "limit_amount": 25000,
+    "limit_text": "Covered up to Rs. 25,000",
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [
+      "No metro/non-metro distinction stated in policy; single limit applies.",
+      "Restricted to first 2 living children per insured female member.",
+      "No metro/non-metro distinction stated in policy; single limit applies"
+    ],
+    "source_pages": [
+      2
+    ],
+    "evidence": "Normal Delivery          : Covered up to Rs. 25,000 (No metro/non-metro distinction)",
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "MAT_NORMAL_NON_METRO",
+    "label": "Maternity - Normal Delivery (Non-Metro)",
+    "status": "limited",
+    "limit_amount": 25000,
+    "limit_text": "Covered up to Rs. 25,000",
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [
+      "No metro/non-metro distinction stated in policy; single limit applies.",
+      "Restricted to first 2 living children per insured female member.",
+      "No metro/non-metro distinction stated in policy; single limit applies"
+    ],
+    "source_pages": [
+      2
+    ],
+    "evidence": "Normal Delivery          : Covered up to Rs. 25,000 (No metro/non-metro distinction)",
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "MAT_CSEC_METRO",
+    "label": "Maternity - C-Section (Metro)",
+    "status": "limited",
+    "limit_amount": 40000,
+    "limit_text": "Covered up to Rs. 40,000",
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [
+      "No metro/non-metro distinction stated in policy; single limit applies.",
+      "Restricted to first 2 living children per insured female member.",
+      "No metro/non-metro distinction stated in policy; single limit applies"
+    ],
+    "source_pages": [
+      2
+    ],
+    "evidence": "Caesarean Section (LSCS) : Covered up to Rs. 40,000 (No metro/non-metro distinction)",
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "MAT_CSEC_NON_METRO",
+    "label": "Maternity - C-Section (Non-Metro)",
+    "status": "limited",
+    "limit_amount": 40000,
+    "limit_text": "Covered up to Rs. 40,000",
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [
+      "No metro/non-metro distinction stated in policy; single limit applies.",
+      "Restricted to first 2 living children per insured female member.",
+      "No metro/non-metro distinction stated in policy; single limit applies"
+    ],
+    "source_pages": [
+      2
+    ],
+    "evidence": "Caesarean Section (LSCS) : Covered up to Rs. 40,000 (No metro/non-metro distinction)",
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "WAIT_30DAY",
+    "label": "30-Day Initial Waiting Period",
+    "status": "waived_off",
+    "limit_amount": null,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": 30,
+    "conditions": [
+      "Waived off for all insured members enrolled at the inception of this policy"
+    ],
+    "source_pages": [
+      3
+    ],
+    "evidence": "The standard 30-day initial waiting period is waived off for all insured members enrolled at the inception of this policy.",
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "WAIT_1YEAR",
+    "label": "1st Year Specific Disease Waiting Period",
+    "status": "needs_review",
+    "limit_amount": null,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [
+      "Waived off from the date of inception for specific diseases (e.g., hernia, cataract, sinusitis)",
+      "GROUNDING_GATE_FAILED: Candidate value rejected — does not exist in source text"
+    ],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": 0.2,
+    "unverified_candidate": {
+      "status": "waived_off",
+      "limit_amount": null,
+      "limit_text": null,
+      "limit_percent_of_si": null,
+      "limit_days": 365,
+      "evidence": "The first year exclusion for specific diseases (e.g., hernia, cataract, sinusitis) is waived off from the date of inception.",
+      "reasons": [
+        "limit_days=365 not found in evidence and cited page text"
+      ]
+    }
+  },
+  {
+    "qms_field": "WAIT_2YEAR",
+    "label": "2nd Year Specific Disease Waiting Period",
+    "status": "needs_review",
+    "limit_amount": null,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [
+      "Waived off from the date of inception for specific diseases",
+      "GROUNDING_GATE_FAILED: Candidate value rejected — does not exist in source text"
+    ],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": 0.2,
+    "unverified_candidate": {
+      "status": "waived_off",
+      "limit_amount": null,
+      "limit_text": null,
+      "limit_percent_of_si": null,
+      "limit_days": 730,
+      "evidence": "The second year exclusion for specific diseases is also waived off from the date of inception.",
+      "reasons": [
+        "limit_days=730 not found in evidence and cited page text"
+      ]
+    }
+  },
+  {
+    "qms_field": "WAIT_PED",
+    "label": "Pre-Existing Disease (PED) Waiting Period",
+    "status": "waived_off",
+    "limit_amount": null,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [
+      "Waived off for all existing insured members from the date of inception of this policy"
+    ],
+    "source_pages": [
+      3
+    ],
+    "evidence": "The waiting period applicable to pre-existing diseases is waived off for all existing insured members from the date of inception of this policy.",
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "BEN_DAYCARE",
+    "label": "Day Care Procedures",
+    "status": "not_mentioned",
+    "limit_amount": null,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": 0.5
+  },
+  {
+    "qms_field": "BEN_OPD",
+    "label": "OPD Benefit",
+    "status": "not_mentioned",
+    "limit_amount": null,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": 0.5
+  },
+  {
+    "qms_field": "BEN_TELECONSULT",
+    "label": "Teleconsultation",
+    "status": "not_mentioned",
+    "limit_amount": null,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": 0.5
+  },
+  {
+    "qms_field": "BEN_PHARMACY",
+    "label": "Pharmacy Discount",
+    "status": "not_mentioned",
+    "limit_amount": null,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": 0.5
+  },
+  {
+    "qms_field": "BEN_DOMICILIARY",
+    "label": "Domiciliary Hospitalisation",
+    "status": "not_mentioned",
+    "limit_amount": null,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": 0.5
+  },
+  {
+    "qms_field": "BEN_HEALTH_CHECK",
+    "label": "Annual Health Check-Up",
+    "status": "not_mentioned",
+    "limit_amount": null,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": 0.5
+  },
+  {
+    "qms_field": "BEN_MODERN_TREAT",
+    "label": "Modern / Advanced Treatment",
+    "status": "not_mentioned",
+    "limit_amount": null,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": 0.5
+  },
+  {
+    "qms_field": "BEN_BARIATRIC",
+    "label": "Bariatric Surgery",
+    "status": "not_mentioned",
+    "limit_amount": null,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": 0.5
+  },
+  {
+    "qms_field": "BEN_PSYCHIATRIC",
+    "label": "Psychiatric / Mental Health Treatment",
+    "status": "not_mentioned",
+    "limit_amount": null,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": 0.5
+  },
+  {
+    "qms_field": "BEN_AYUSH",
+    "label": "AYUSH Treatment",
+    "status": "not_mentioned",
+    "limit_amount": null,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": 0.5
+  },
+  {
+    "qms_field": "BEN_LGBTQ",
+    "label": "LGBTQ+ Cover",
+    "status": "not_mentioned",
+    "limit_amount": null,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": 0.5
+  },
+  {
+    "qms_field": "BEN_LIVEIN",
+    "label": "Live-In Partner Cover",
+    "status": "not_mentioned",
+    "limit_amount": null,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": 0.5
+  },
+  {
+    "qms_field": "BEN_ORGAN_DONOR",
+    "label": "Organ Donor Expenses",
+    "status": "not_mentioned",
+    "limit_amount": null,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": 0.5
+  },
+  {
+    "qms_field": "INF_TREATMENT",
+    "label": "Infertility Treatment",
+    "status": "not_covered",
+    "limit_amount": null,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [
+      "Infertility treatment and assisted reproduction (IVF/ICSI) are excluded under Section 6.3."
+    ],
+    "source_pages": [
+      5
+    ],
+    "evidence": "6.3 Infertility treatment and assisted reproduction (IVF/ICSI).",
+    "confidence": 0.99
+  },
+  {
+    "qms_field": "INF_SURROGACY",
+    "label": "Surrogacy",
+    "status": "not_covered",
+    "limit_amount": null,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [
+      "Surrogacy-related expenses are excluded under Section 6.4."
+    ],
+    "source_pages": [
+      5
+    ],
+    "evidence": "6.4 Surrogacy-related expenses.",
+    "confidence": 0.99
+  },
+  {
+    "qms_field": "AMB_ROAD",
+    "label": "Ambulance Charges (Road)",
+    "status": "limited",
+    "limit_amount": 2000,
+    "limit_text": "Rs. 2,000 per event of hospitalization",
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [
+      "Road ambulance charges are covered up to Rs. 2,000 per event of hospitalization."
+    ],
+    "source_pages": [
+      2
+    ],
+    "evidence": "Road ambulance charges are covered up to Rs. 2,000 per event of hospitalization.",
+    "confidence": 0.98
+  },
+  {
+    "qms_field": "AMB_AIR",
+    "label": "Air Ambulance",
+    "status": "not_mentioned",
+    "limit_amount": null,
+    "limit_text": null,
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [],
+    "evidence": null,
+    "confidence": 0.5
+  },
+  {
+    "qms_field": "BUF_AMOUNT",
+    "label": "Corporate Buffer Limit",
+    "status": "covered",
+    "limit_amount": 500000,
+    "limit_text": "Rs. 5,00,000 (Five Lakhs)",
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [
+      "Available over and above the individual Sum Insured",
+      "Applicable only for employees who are diagnosed with any of the specified critical illnesses during the policy period",
+      "Available only to Primary Insured Members (Employees) after complete exhaustion of the individual Sum Insured",
+      "Subject to HR approval",
+      "Dependents are NOT eligible"
+    ],
+    "source_pages": [
+      4
+    ],
+    "evidence": "A Corporate Buffer / Floater of Rs. 5,00,000 (Five Lakhs) is available over and above the individual Sum Insured for employees who are diagnosed with any of the following critical illnesses during the policy period.",
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "BUF_ELIGIBILITY",
+    "label": "Corporate Buffer - Who Can Use",
+    "status": "covered",
+    "limit_amount": null,
+    "limit_text": "Available only to Primary Insured Members (Employees) after complete exhaustion of the individual Sum Insured, subject to HR approval, for employees diagnosed with specified critical illnesses. Dependents are NOT eligible.",
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [
+      2
+    ],
+    "evidence": "Newborn baby is covered from the first day of birth under the mother's Sum Insured",
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "BUF_DISEASE_CAPPING",
+    "label": "Disease-Wise Capping",
+    "status": "covered",
+    "limit_amount": null,
+    "limit_text": [
+      {
+        "disease": "Hernia surgery",
+        "limit_amount": 30000,
+        "limit_text": "Rs. 30,000 per episode",
+        "conditions": [],
+        "page": null,
+        "evidence": null
+      },
+      {
+        "disease": "Tonsillectomy",
+        "limit_amount": 20000,
+        "limit_text": "Rs. 20,000 per episode",
+        "conditions": [],
+        "page": null,
+        "evidence": null
+      },
+      {
+        "disease": "Hysterectomy",
+        "limit_amount": 50000,
+        "limit_text": "Rs. 50,000 per episode",
+        "conditions": [],
+        "page": null,
+        "evidence": null
+      },
+      {
+        "disease": "Cataract surgery",
+        "limit_amount": 15000,
+        "limit_text": "Capped at Rs. 15,000 per eye",
+        "conditions": [],
+        "page": null,
+        "evidence": null
+      }
+    ],
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [],
+    "source_pages": [
+      3
+    ],
+    "evidence": "The second year exclusion for specific diseases is also waived off from the date of",
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "COPAY_SUBLIMITS",
+    "label": "Co-Pay & Procedure Sub-Limits",
+    "status": "covered",
+    "limit_amount": null,
+    "limit_text": [
+      {
+        "item": "Cochlear Implant and other hearing devices implanted during surgery",
+        "type": "copay",
+        "limit_amount": null,
+        "amount": null,
+        "limit_percent": null,
+        "percent": 50.0,
+        "limit_text": null,
+        "applies_to": "50% co-pay for Cochlear Implant and other hearing devices implanted during surgery.",
+        "exceptions": null,
+        "conditions": [],
+        "page": 3,
+        "evidence": "50% co-pay for Cochlear Implant and other hearing devices implanted during surgery."
+      },
+      {
+        "item": "per eye",
+        "type": "sublimit",
+        "limit_amount": null,
+        "amount": null,
+        "limit_percent": null,
+        "percent": null,
+        "limit_text": null,
+        "applies_to": "Cataract surgery: capped at Rs. 15,000 per eye.",
+        "exceptions": null,
+        "conditions": [],
+        "page": 3,
+        "evidence": "Cataract surgery: capped at Rs. 15,000 per eye."
+      }
+    ],
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [
+      "Cochlear Implant and other hearing devices implanted during surgery: 50.0% co-pay",
+      "per eye"
+    ],
+    "source_pages": [
+      3
+    ],
+    "evidence": "50% co-pay for Cochlear Implant and other hearing devices implanted during surgery.; Cataract surgery: capped at Rs. 15,000 per eye.",
+    "confidence": 1.0
+  },
+  {
+    "qms_field": "BUF_WAIVER_CONDITIONS",
+    "label": "Applicable Waiver Conditions",
+    "status": "covered",
+    "limit_amount": null,
+    "limit_text": [
+      "The standard 30-day initial waiting period is waived off for all insured members enrolled at the inception of this policy.",
+      "The waiting period applicable to pre-existing diseases is waived off for all existing insured members from the date of inception of this policy.",
+      "The 9-month waiting period applicable to maternity benefits is hereby waived off from the date of inception of this policy.",
+      "The 9-month waiting period applicable to maternity benefits is hereby waived off",
+      "The standard 30-day initial waiting period is waived off for all insured members",
+      "The second year exclusion for specific diseases is also waived off from the date of",
+      "The waiting period applicable to pre-existing diseases is waived off for all"
+    ],
+    "limit_percent_of_si": null,
+    "limit_days": null,
+    "conditions": [
+      {
+        "waiver_name": "30-Day Initial Waiting Period",
+        "clause": "The standard 30-day initial waiting period is waived off for all insured members enrolled at the inception of this policy.",
+        "page": 3,
+        "evidence": "The standard 30-day initial waiting period is waived off for all insured members enrolled at the inception of this policy."
+      },
+      {
+        "waiver_name": "Pre-Existing Diseases (PED) Waiting Period",
+        "clause": "The waiting period applicable to pre-existing diseases is waived off for all existing insured members from the date of inception of this policy.",
+        "page": 3,
+        "evidence": "The waiting period applicable to pre-existing diseases is waived off for all existing insured members from the date of inception of this policy."
+      },
+      {
+        "waiver_name": "Maternity 9-Month Waiting Period",
+        "clause": "The 9-month waiting period applicable to maternity benefits is hereby waived off from the date of inception of this policy.",
+        "page": 2,
+        "evidence": "The 9-month waiting period applicable to maternity benefits is hereby waived off from the date of inception of this policy."
+      },
+      {
+        "waiver_name": "Policy Clause Waiver",
+        "clause": "The 9-month waiting period applicable to maternity benefits is hereby waived off",
+        "page": 2,
+        "evidence": "The 9-month waiting period applicable to maternity benefits is hereby waived off"
+      },
+      {
+        "waiver_name": "Policy Clause Waiver",
+        "clause": "The standard 30-day initial waiting period is waived off for all insured members",
+        "page": 3,
+        "evidence": "The standard 30-day initial waiting period is waived off for all insured members"
+      },
+      {
+        "waiver_name": "Policy Clause Waiver",
+        "clause": "The second year exclusion for specific diseases is also waived off from the date of",
+        "page": 3,
+        "evidence": "The second year exclusion for specific diseases is also waived off from the date of"
+      },
+      {
+        "waiver_name": "Policy Clause Waiver",
+        "clause": "The waiting period applicable to pre-existing diseases is waived off for all",
+        "page": 3,
+        "evidence": "The waiting period applicable to pre-existing diseases is waived off for all"
+      }
+    ],
+    "source_pages": [
+      2,
+      3
+    ],
+    "evidence": "The standard 30-day initial waiting period is waived off for all insured members enrolled at the inception of this policy.; The waiting period applicable to pre-existing diseases is waived off for all existing insured members from the date of inception of this policy.; The 9-month waiting period app",
+    "confidence": 1.0
+  }
+]

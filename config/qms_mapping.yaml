@@ -54,6 +54,16 @@ policy_details.premium_including_gst:
   label: "Premium (including GST)"
   type: amount
 
+policy_details.sum_insured_tiers:
+  qms_field: POL_SI_TIERS
+  label: "Sum Insured Tiers"
+  type: list
+
+policy_details.total_sum_insured:
+  qms_field: POL_TOTAL_SUM_INSURED
+  label: "Total Sum Insured (Aggregate)"
+  type: amount
+
 policy_details.family_structure.employee:
   qms_field: FAM_EMPLOYEE
   label: "Family - Employee Covered"
@@ -83,6 +93,11 @@ policy_details.family_structure.parents_in_law:
 demographics.num_employees:
   qms_field: DEM_EMPLOYEES
   label: "Number of Employees"
+  type: amount
+
+demographics.num_dependents:
+  qms_field: DEM_DEPENDENTS
+  label: "Number of Dependents"
   type: amount
 
 demographics.num_spouses:
@@ -116,20 +131,10 @@ features.room_hospitalization.room_rent:
   label: "Room Rent Limit"
   type: amount
 
-features.room_hospitalization.room_rent_percent:
-  qms_field: ROOM_RENT_PCT
-  label: "Room Rent (% of SI)"
-  type: percent
-
 features.room_hospitalization.icu_charges:
   qms_field: ROOM_ICU
   label: "ICU Charges Limit"
   type: amount
-
-features.room_hospitalization.icu_charges_percent:
-  qms_field: ROOM_ICU_PCT
-  label: "ICU Charges (% of SI)"
-  type: percent
 
 features.room_hospitalization.pre_hospitalization_days:
   qms_field: ROOM_PRE_HOSP_DAYS
@@ -300,6 +305,11 @@ features.buffer_waiver.corporate_buffer_eligibility:
 features.buffer_waiver.disease_wise_capping:
   qms_field: BUF_DISEASE_CAPPING
   label: "Disease-Wise Capping"
+  type: list
+
+features.buffer_waiver.copay_sublimits:
+  qms_field: COPAY_SUBLIMITS
+  label: "Co-Pay & Procedure Sub-Limits"
   type: list
 
 features.buffer_waiver.waiver_conditions:

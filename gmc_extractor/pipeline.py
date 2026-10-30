@@ -72,6 +72,7 @@ def run_pdf(
     )
     result = ExtractionResult(document_info=doc_info)
 
+    failed_groups: list[str] = []
     for spec in ALL_GROUPS:
         logger.info("Extracting group: %s", spec.name)
         try:
@@ -85,14 +86,23 @@ def run_pdf(
             # Assign to the correct field on the result
             _assign_group(result, spec.name, group_result)
         except Exception as exc:
-            msg = f"Group '{spec.name}' failed with unexpected error: {exc}"
+            msg = f"Group '{spec.name}': extraction_failed due to error: {exc}"
             logger.error(msg, exc_info=True)
             warnings.append(msg)
+            failed_groups.append(spec.name)
+
+    # Record any groups that failed LLM calls in runner
+    for w in warnings:
+        if "extraction_failed" in w or "extraction failed" in w:
+            for spec in ALL_GROUPS:
+                if f"'{spec.name}'" in w and spec.name not in failed_groups:
+                    failed_groups.append(spec.name)
+    result.document_info.failed_groups = failed_groups
 
     # ── 5. POSTPROCESS ───────────────────────────────────────────────────────
     result_dict = result.model_dump(mode="json")
     result_dict = ground_result(result_dict, pages, warnings)
-    result_dict = validate_result(result_dict, warnings)
+    result_dict = validate_result(result_dict, warnings, pages=pages)
     overall_conf = compute_overall_confidence(result_dict)
 
     # Reconstruct result from the post-processed dict
@@ -102,8 +112,8 @@ def run_pdf(
 
     # ── 6. EXPORT ────────────────────────────────────────────────────────────
     stem = settings.output_dir / pdf_path.stem
-    write_json(result, stem.with_suffix(".json"))
-    write_qms(result, stem, settings)
+    write_json(result, stem.parent / (stem.name + ".json"))
+    write_qms(result, stem, settings, pages=pages)
     write_report(result, stem.parent / (stem.name + ".report.md"))
 
     logger.info(

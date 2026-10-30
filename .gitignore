@@ -36,4 +36,8 @@ Thumbs.db
 # Logs
 *.log
 
+# Sensitive policy documents (keep samples/ directory with .gitkeep, ignore real PDFs)
+samples/*.pdf
+uploads/
+
 # NOTE: output/*.json and output/*.csv are NOT ignored - they are committed

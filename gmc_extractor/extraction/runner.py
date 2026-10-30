@@ -84,7 +84,7 @@ def extract_group(
             result = _merge(result, result2, spec)
 
     if result is None:
-        warnings.append(f"Group '{spec.name}': extraction failed; using empty defaults.")
+        warnings.append(f"Group '{spec.name}': extraction_failed. LLM call failed or quota exhausted. All values set to null.")
         result = spec.model()  # type: ignore[call-arg]
 
     return result
