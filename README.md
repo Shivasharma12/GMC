@@ -4,7 +4,167 @@ A zero-template, layout-aware AI extraction system designed to parse complex Ind
 
 ---
 
-## 1. System Architecture
+## Table of Contents
+1. [Installation Guide](#1-installation-guide)
+2. [How to Run the Application](#2-how-to-run-the-application)
+3. [System Architecture](#3-system-architecture)
+4. [Technology Stack, Libraries & Frameworks](#4-technology-stack-libraries--frameworks)
+5. [Core Capabilities](#5-core-capabilities)
+6. [How the Pipeline Works](#6-how-the-pipeline-works)
+7. [REST API Specification](#7-rest-api-specification)
+8. [CLI Command Reference](#8-cli-command-reference)
+9. [Interactive React Dashboard](#9-interactive-react-dashboard)
+10. [Directory Structure](#10-directory-structure)
+
+---
+
+## 1. Installation Guide
+
+### Prerequisites
+- **Python 3.10+** (Python 3.11 or 3.12 recommended)
+- **Git** installed on your system
+- **Google Gemini API Key** (or OpenAI API key / local Ollama instance)
+- *(Optional)* [Tesseract OCR](https://github.com/UB-Mannheim/tesseract/wiki) (only required if processing scanned/image-only PDFs)
+
+---
+
+### Step-by-Step Installation
+
+#### Step 1: Clone the Repository
+```bash
+git clone https://github.com/Shivasharma12/GMC.git
+cd GMC
+```
+
+#### Step 2: Create a Virtual Environment
+It is recommended to use an isolated Python virtual environment.
+
+- **On Windows (PowerShell or Command Prompt):**
+  ```powershell
+  python -m venv venv
+  .\venv\Scripts\activate
+  ```
+
+- **On macOS / Linux:**
+  ```bash
+  python3 -m venv venv
+  source venv/bin/activate
+  ```
+
+#### Step 3: Install Required Dependencies
+Install all pinned dependencies via `pip`:
+```bash
+pip install -r requirements.txt
+```
+
+#### Step 4: Configure Environment Variables (`.env`)
+Create a `.env` file in the root directory by copying `.env.example`:
+```bash
+cp .env.example .env
+```
+Open `.env` in any text editor and add your API credentials:
+```env
+# Primary LLM Provider: gemini, openai, or ollama
+LLM_PROVIDER=gemini
+
+# Google Gemini Settings (Free Tier / Paid)
+GEMINI_API_KEY=your_actual_gemini_api_key_here
+GEMINI_MODEL=gemini-3.5-flash-lite
+
+# (Optional) OpenAI Settings
+OPENAI_API_KEY=your_openai_api_key_here
+OPENAI_MODEL=gpt-4o-mini
+
+# (Optional) Ollama Local Server Settings
+OLLAMA_BASE_URL=http://localhost:11434
+OLLAMA_MODEL=qwen2.5:7b
+
+# Pipeline Settings
+CACHE_DIR=.cache
+LOG_LEVEL=INFO
+```
+
+---
+
+## 2. How to Run the Application
+
+You can run the application in two ways: via the **Interactive Web Dashboard** (recommended) or directly via the **Command Line Interface (CLI)**.
+
+---
+
+### Method A: Interactive Web Dashboard (Recommended)
+
+Start the unified FastAPI server and pre-compiled React dashboard:
+
+```bash
+# Launch server on port 8000
+python main.py serve --port 8000
+```
+*(Alternative direct launch: `python server.py --port 8000`)*
+
+1. Open your browser and navigate to:
+   ```
+   http://127.0.0.1:8000
+   ```
+2. **Select or Upload a Policy**:
+   - Pick an existing sample policy from the dropdown (e.g. `1.Policy Copy.pdf`, `Niva_Bupa_GMC_Renewal.pdf`, `GHI_Policy.pdf`).
+   - Or click **Upload** to process any new GMC PDF document (up to 30MB).
+3. **Run Extraction**:
+   - Select your preferred engine (Google Gemini, OpenAI GPT, or Ollama Local).
+   - Click **Start Extraction**. The pipeline runs retrieval, LLM extraction, normalization, and grounding validation in 5–15 seconds.
+4. **Inspect Policy Intelligence**:
+   - **Executive Overview**: High-level card metrics (Insurer, Policy Number, Period, Lives, floater limits, and premium summary).
+   - **Coverage & Benefits Matrix**: View all 58 benefits with status badges, numerical caps, conditions, and verbatim evidence quotes.
+   - **Grounding Audit**: Verify that each extracted number appears in the PDF text with $\ge 90\%$ fuzzy match.
+   - **Side-by-Side PDF Viewer**: View the source document and jump directly to cited pages.
+5. **Export & Download Data**:
+   - Click **Export Data** in the top header to download:
+     - 📥 **QMS CSV** (`.qms.csv`) — flat spreadsheet table ready for underwriting.
+     - 📄 **QMS JSON** (`.qms.json`) — standard Quote Management System JSON array.
+     - 🗂️ **Full JSON** (`.json`) — complete hierarchical nested schema.
+     - 📝 **Audit Report** (`.report.md`) — markdown review report.
+
+---
+
+### Method B: Command Line Interface (CLI)
+
+The CLI supports single file processing, batch folder extraction, and structural diagnostics:
+
+#### 1. Extract a Single Policy PDF
+```bash
+python main.py run "samples/1.Policy Copy.pdf"
+```
+Outputs are automatically written to `output/`:
+- `output/1.Policy Copy.json` (Hierarchical JSON)
+- `output/1.Policy Copy.qms.json` (Flat QMS JSON)
+- `output/1.Policy Copy.qms.csv` (QMS CSV)
+- `output/1.Policy Copy.report.md` (Markdown report)
+
+#### 2. Run Extraction Bypassing Cache
+Force a fresh run without using cached LLM responses:
+```bash
+python main.py run "samples/Niva_Bupa_GMC_Renewal.pdf" --no-cache
+```
+
+#### 3. Run with Specific Provider or Model Override
+```bash
+python main.py run "samples/GHI_Policy.pdf" --provider gemini --model gemini-3.5-flash-lite --no-cache
+```
+
+#### 4. Batch Process an Entire Directory of PDFs
+```bash
+python main.py run-all "samples/"
+```
+
+#### 5. Inspect PDF Structure Without Calling LLM
+Quickly check page count, scanned status, and structural ALL-CAPS section headings:
+```bash
+python main.py inspect "samples/1.Policy Copy.pdf"
+```
+
+---
+
+## 3. System Architecture
 
 The pipeline processes policies through a 5-stage hybrid architecture combining native C-level PDF parsing, layout-preserving table reconstruction, synonym-driven BM25 retrieval, schema-enforced LLM inference, and an automated Grounding Gate.
 
@@ -64,7 +224,7 @@ flowchart TD
 
 ---
 
-## 2. Technology Stack, Libraries & Frameworks
+## 4. Technology Stack, Libraries & Frameworks
 
 | Layer | Library / Framework | Version | Role & Justification |
 | :--- | :--- | :--- | :--- |
@@ -88,7 +248,7 @@ flowchart TD
 
 ---
 
-## 3. Core Capabilities
+## 5. Core Capabilities
 
 ### A. Zero-Template & Insurer-Agnostic
 - **No hardcoded insurer names, no hardcoded page numbers, and no company-specific templates.**
@@ -128,7 +288,7 @@ Extracts over 58 fields across 10 functional groups:
 
 ---
 
-## 4. How the Pipeline Works
+## 6. How the Pipeline Works
 
 1. **Stage 1: Document Ingestion & Text Normalization** (`gmc_extractor/pdf/`)
    - Reads the PDF with PyMuPDF. If native text character count $< 30$, activates Tesseract OCR.
@@ -161,7 +321,7 @@ Extracts over 58 fields across 10 functional groups:
 
 ---
 
-## 5. REST API Specification
+## 7. REST API Specification
 
 The FastAPI server in `server.py` hosts the backend API and serves the compiled React dashboard at `http://127.0.0.1:8000`.
 
@@ -179,7 +339,7 @@ The FastAPI server in `server.py` hosts the backend API and serves the compiled 
 
 ---
 
-## 6. Command Line Interface (CLI)
+## 8. CLI Command Reference
 
 The CLI in `main.py` is built with `typer`:
 
@@ -202,7 +362,7 @@ python main.py serve --port 8000
 
 ---
 
-## 7. Interactive React Dashboard
+## 9. Interactive React Dashboard
 
 The dashboard provides an enterprise visual interface:
 
@@ -216,49 +376,10 @@ The dashboard provides an enterprise visual interface:
 
 ---
 
-## 8. Quickstart & Setup Guide
-
-### Prerequisites
-- Python 3.10+ (Python 3.12 recommended)
-- (Optional) [Tesseract OCR](https://github.com/UB-Mannheim/tesseract/wiki) for scanned image-only PDFs
-
-### 1. Setup Virtual Environment
-```bash
-cd gmc-extractor
-python -m venv venv
-
-# Windows:
-venv\Scripts\activate
-
-# macOS / Linux:
-source venv/bin/activate
-```
-
-### 2. Install Dependencies
-```bash
-pip install -r requirements.txt
-```
-
-### 3. Configure API Key
-Create or edit `.env` in the `gmc-extractor/` directory:
-```env
-LLM_PROVIDER=gemini
-GEMINI_API_KEY=your_gemini_api_key_here
-GEMINI_MODEL=gemini-3.5-flash-lite
-```
-
-### 4. Launch the Dashboard
-```bash
-python main.py serve --port 8000
-```
-Open **`http://127.0.0.1:8000`** in your browser to inspect extracted policies, run new extractions, view audit trails, and download QMS CSVs.
-
----
-
-## 9. Directory Structure Reference
+## 10. Directory Structure
 
 ```text
-gmc-extractor/
+GMC/
 ├── config/
 │   ├── keywords.yaml         # Indian insurance synonym dictionary & search terms
 │   └── qms_mapping.yaml      # Mapping from internal Pydantic paths to flat QMS keys
@@ -280,7 +401,7 @@ gmc-extractor/
 ├── uploads/                  # User-uploaded PDFs
 ├── venv/                     # Python 3.12 virtual environment
 ├── main.py                   # Typer CLI entrypoint
-├── README.md                 # Single comprehensive project documentation
+├── README.md                 # Single comprehensive project documentation & guide
 ├── requirements.txt          # Python dependencies
 └── server.py                 # FastAPI backend server
 ```
